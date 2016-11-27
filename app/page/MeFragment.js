@@ -13,6 +13,7 @@ export default class MeFragment extends Component {
 
 const styles = StyleSheet.create({
   view: {
+    flex: 1,
     marginTop: (Platform.OS === 'ios') ? 20 : 0
   }
 });
