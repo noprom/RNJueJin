@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Navigator} from 'react-native';
 import MainScene from '../page/MainPage';
 
-export default class Navigator extends Component {
+export default class Navigation extends Component {
   render() {
     return (
       <Navigator
