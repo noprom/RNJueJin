@@ -11,7 +11,7 @@ export default class HomeFragment extends Component {
   }
 }
 
-const styles = StyleSheet.createClass({
+const styles = StyleSheet.create({
   view: {
     marginTop: (Platform.OS === 'ios') ? 20 : 0
   }

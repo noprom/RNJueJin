@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
-import { Text } from 'react-native';
+import { Text, View } from 'react-native';
+import TabBar from '../component/TabBar';
 
 export default class MainPage extends Component {
   render() {
     return (
-      <Text>Main Scene</Text>
+      <View>
+        <TabBar />
+      </View>
     );
   }
 }

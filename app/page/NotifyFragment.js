@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, Platform } from 'react-native';
 
-export default class NotificationFragment extends Component {
+export default class NotifyFragment extends Component {
   render() {
     return (
       <View style={styles.view}>
@@ -11,7 +11,7 @@ export default class NotificationFragment extends Component {
   }
 }
 
-const styles = StyleSheet.createClass({
+const styles = StyleSheet.create({
   view: {
     marginTop: (Platform.OS === 'ios') ? 20 : 0
   }
