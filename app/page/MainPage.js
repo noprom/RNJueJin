@@ -5,7 +5,7 @@ import TabBar from '../component/TabBar';
 export default class MainPage extends Component {
   render() {
     return (
-      <View>
+      <View style={{flex: 1, justifyContent: 'flex-end'}}>
         <TabBar />
       </View>
     );
