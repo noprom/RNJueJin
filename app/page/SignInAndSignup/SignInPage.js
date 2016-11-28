@@ -5,6 +5,7 @@ import Button from './Button';
 import TextButton from './TextButton';
 import SignUpPage from './SignUpPage';
 import ImageButton from './ImageButton';
+import TextDivider from './TextDivider';
 
 export default class SignInPage extends Component {
 
@@ -61,6 +62,9 @@ export default class SignInPage extends Component {
             <TextButton text="注册账号" onPress={this._signUpCallback.bind(this)}/>
           </View>
           <View>
+            <View style={{flex: 1, justifyContent: 'flex-end', margin: 5}}>
+              <TextDivider text="使用其他账号登陆"/>
+            </View>
             <View style={styles.thirdPartyView}>
               <ImageButton text="微博" image={require('../../image/weibo_login.png')}/>
               <ImageButton text="微信" image={require('../../image/wechat_login.png')}/>

@@ -7,7 +7,7 @@ import {
 
 export default class TextDivider extends Component {
   static propTypes = {
-    text: PropTypes.string.idRequired
+    text: PropTypes.string.isRequired
   };
 
   render() {
