@@ -1,20 +1,26 @@
+'use strict';
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, Platform, TouchableOpacity, Image, TextInput } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import Button from './Button';
 import TextButton from './TextButton';
 import SignUpPage from './SignUpPage';
+import MainPage from './MainPage';
 import ImageButton from './ImageButton';
 import TextDivider from './TextDivider';
 
 export default class SignInPage extends Component {
 
   _backCallback() {
-
+    this.props.navigator.push({
+      component: MainPage
+    });
   }
 
   _signInCallback() {
-
+    this.props.navigator.push({
+      component: MainPage
+    });
   }
 
   _signUpCallback() {

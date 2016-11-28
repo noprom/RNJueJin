@@ -1,3 +1,4 @@
+'use strict';
 import React, { Component } from 'react';
 import { Text, View } from 'react-native';
 import TabBar from '../component/TabBar';
