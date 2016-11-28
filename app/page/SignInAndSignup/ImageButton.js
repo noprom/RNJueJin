@@ -34,11 +34,11 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   img: {
-    width: 50,
-    height: 50
+    width: 40,
+    height: 40
   },
   text: {
-    fontSize: 16,
+    fontSize: 13,
     color: 'rgba(255,255,255,0.7)'
   }
 });

@@ -5,7 +5,7 @@ import {
   View,
   StyleSheet,
   Platform,
-  TouchableOpacity,
+  TouchableHighlight,
   TouchableNativeFeedback
 } from 'react-native';
 
@@ -27,9 +27,11 @@ export default class Button extends Component {
       );
     } else if (Platform.OS === 'ios') {
       return (
-        <View style={styles.button}>
-          <Text style={styles.text}>{this.props.text}</Text>
-        </View>
+        <TouchableHighlight onPress={this.props.onPress}>
+          <View style={styles.button}>
+            <Text style={styles.text}>{this.props.text}</Text>
+          </View>
+        </TouchableHighlight>
       );
     }
   }
@@ -41,10 +43,10 @@ const styles = StyleSheet.create({
     fontSize: 23
   },
   button: {
-    height: 65,
+    height: 45,
     backgroundColor: '#046ada',
     alignItems:'center',
     justifyContent:'center',
-    borderRadius: 3
+    borderRadius: 2
   }
 });

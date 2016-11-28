@@ -25,7 +25,7 @@ export default class TextButton extends Component {
         onPress={this.props.onPress}
       >
         <View style={styles.button}>
-          <Text style={{fontSize:20, color: this.props.color}}>{this.props.text}</Text>
+          <Text style={{fontSize: 12, color: this.props.color}}>{this.props.text}</Text>
         </View>
       </TouchableOpacity>
     );
@@ -34,6 +34,6 @@ export default class TextButton extends Component {
 
 const styles = StyleSheet.create({
   button: {
-    height: 25
+    height: 16
   }
 });

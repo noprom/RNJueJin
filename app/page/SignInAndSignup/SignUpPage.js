@@ -26,7 +26,7 @@ export default class SignUpPage extends Component {
       <View style={styles.view}>
         <View style={styles.actionBar}>
           <TouchableOpacity onPress={this._onPress.bind(this)}>
-            <Icon name="md-arrow-back" size={30} color="white"/>
+            <Icon name="md-arrow-back" size={18} color="white"/>
           </TouchableOpacity>
         </View>
         <View style={styles.logo}>
@@ -55,7 +55,7 @@ export default class SignUpPage extends Component {
               placeholder="密码"
               placeholderTextColor="#c4c4c4"/>
           </View>
-          <View style={{marginTop: 20}}>
+          <View style={{marginTop: 15}}>
             <Button text="注册" onPress={this._signinCallback.bind(this)}/>
           </View>
         </View>
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgb(22, 131, 251)'
   },
   actionBar: {
-    margin: 15
+    margin: 20
   },
   logo: {
     alignItems: 'center'
@@ -87,11 +87,11 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 3
   },
   edit: {
-    height: 45,
-    fontSize: 20,
+    height: 38,
+    fontSize: 13,
     backgroundColor: '#fff',
-    marginLeft: 20,
-    marginRight: 20,
-    marginBottom: 7
+    paddingLeft: 10,
+    paddingRight: 3,
+    marginBottom: 3
   }
 });

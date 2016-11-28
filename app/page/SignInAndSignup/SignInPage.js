@@ -1,11 +1,11 @@
 'use strict';
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, Platform, TouchableOpacity, Image, TextInput } from 'react-native';
+import { Text, View, StyleSheet, PixelRatio, Platform, TouchableOpacity, Image, TextInput } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import Button from './Button';
 import TextButton from './TextButton';
 import SignUpPage from './SignUpPage';
-import MainPage from './MainPage';
+import MainPage from '../MainPage';
 import ImageButton from './ImageButton';
 import TextDivider from './TextDivider';
 
@@ -38,11 +38,11 @@ export default class SignInPage extends Component {
       <View style={styles.view}>
         <View style={styles.actionBar}>
           <TouchableOpacity onPress={this._backCallback.bind(this)}>
-            <Icon name="md-arrow-back" size={30} color="white"/>
+            <Icon name="md-arrow-back" size={18} color="white"/>
           </TouchableOpacity>
         </View>
         <View style={styles.logo}>
-          <Image style={{width:60, height:60}} source={require('../../image/ic_login_logo.png')} />
+          <Image style={{width:45, height:45}} source={require('../../image/ic_login_logo.png')} />
         </View>
         <View style={styles.editGroup}>
           <View style={styles.editView}>
@@ -52,6 +52,7 @@ export default class SignInPage extends Component {
               placeholder="手机号/邮箱"
               placeholderTextColor="#c4c4c4"/>
           </View>
+          <View style={{height: 1 / PixelRatio.get(), backgroundColor:'#c4c4c4'}}/>
           {/*<View style={{height: 1, backgroundColor:'#c4c4c4'}}/>*/}
           <View style={styles.editView}>
             <TextInput
@@ -65,7 +66,7 @@ export default class SignInPage extends Component {
           </View>
           <View style={styles.textButtonLine}>
             <TextButton text="忘记密码?" onPress={this._forgetPassword.bind(this)} color="rgba(255,255,255,0.5)"/>
-            <TextButton text="注册账号" onPress={this._signUpCallback.bind(this)}/>
+            <TextButton text="注册账号" onPress={this._signUpCallback.bind(this)} color="rgba(255,255,255,0.5)"/>
           </View>
           <View>
             <View style={{flex: 1, justifyContent: 'flex-end', margin: 5}}>
@@ -90,11 +91,11 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgb(22, 131, 251)'
   },
   actionBar: {
-    margin: 25
+    margin: 20
   },
   logo: {
     alignItems: 'center',
-    margin: 20
+    marginTop: 40
   },
   editGroup: {
     margin: 20
@@ -107,12 +108,12 @@ const styles = StyleSheet.create({
     borderRadius: 3
   },
   edit: {
-    height: 25,
-    fontSize: 14,
+    height: 38,
+    fontSize: 13,
     backgroundColor: '#fff',
-    marginLeft: 20,
-    marginRight: 20,
-    marginBottom: 7
+    paddingLeft: 10,
+    paddingRight: 3,
+    marginBottom: 3
   },
   textButtonLine: {
     marginTop: 25,
