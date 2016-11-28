@@ -17,47 +17,49 @@ export default class SignUpPage extends Component {
   }
 
   _signinCallback() {
-    render() {
-      return(
-        <View style={styles.view}>
-          <View style={styles.actionBar}>
-            <TouchableOpacity onPress={this._onPress.bind(this)}>
-              <Icon name="md-arrow-back" size={30} color="white"/>
-            </TouchableOpacity>
+
+  }
+
+  render() {
+    return(
+      <View style={styles.view}>
+        <View style={styles.actionBar}>
+          <TouchableOpacity onPress={this._onPress.bind(this)}>
+            <Icon name="md-arrow-back" size={30} color="white"/>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.logo}>
+          <Image source={require('../../image/ic_launcher.png')} />
+        </View>
+        <View style={styles.editGroup}>
+          <View style={styles.editView}>
+            <TextInput
+              style={styles.edit}
+              underlineColorAndroid="transparent"
+              placeholder="手机号/邮箱"
+              placeholderTextColor="#c4c4c4"/>
           </View>
-          <View style={styles.logo}>
-            <Image source={require('../../image/ic_launcher.png')} />
+          <View style={{height: 1, backgroundColor:'#c4c4c4'}}/>
+          <View style={styles.editView}>
+            <TextInput
+              style={styles.edit}
+              underlineColorAndroid="transparent"
+              placeholder="用户名"
+              placeholderTextColor="#c4c4c4"/>
           </View>
-          <View style={styles.editGroup}>
-            <View style={styles.editView}>
-              <TextInput
-                style={styles.edit}
-                underlineColorAndroid="transparent"
-                placeholder="手机号/邮箱"
-                placeholderTextColor="#c4c4c4"/>
-            </View>
-            <View style={{height: 1, backgroundColor:'#c4c4c4'}}/>
-            <View style={styles.editView}>
-              <TextInput
-                style={styles.edit}
-                underlineColorAndroid="transparent"
-                placeholder="用户名"
-                placeholderTextColor="#c4c4c4"/>
-            </View>
-            <View style={styles.editView}>
-              <TextInput
-                style={styles.edit}
-                underlineColorAndroid="transparent"
-                placeholder="密码"
-                placeholderTextColor="#c4c4c4"/>
-            </View>
-            <View style={{marginTop: 20}}>
-              <Button text="注册" onPress={this._signinCallback.bind(this)}/>
-            </View>
+          <View style={styles.editView}>
+            <TextInput
+              style={styles.edit}
+              underlineColorAndroid="transparent"
+              placeholder="密码"
+              placeholderTextColor="#c4c4c4"/>
+          </View>
+          <View style={{marginTop: 20}}>
+            <Button text="注册" onPress={this._signinCallback.bind(this)}/>
           </View>
         </View>
-      );
-    }
+      </View>
+    );
   }
 }
 
