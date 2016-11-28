@@ -25,7 +25,11 @@ export default class Button extends Component {
         </TouchableNativeFeedback>
       );
     } else if (Platform.OS === 'ios') {
-
+      return (
+        <View style={{height: 65, backgroundColor: '#046ada', alignItems:'center', justifyContent:'center'}}>
+          <Text style={styles.text}>{this.props.text}</Text>
+        </View>
+      );
     }
   }
 }
