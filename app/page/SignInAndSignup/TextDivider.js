@@ -2,10 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import {
   Text,
   View,
-  StyleSheet,
-  Platform,
-  TouchableOpacity,
-  Image
+  StyleSheet
 } from 'react-native';
 
 export default class TextDivider extends Component {
