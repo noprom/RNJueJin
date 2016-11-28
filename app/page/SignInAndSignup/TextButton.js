@@ -10,11 +10,12 @@ import {
 export default class TextButton extends Component {
   static propTypes = {
     text: PropTypes.string.isRequired,
-    onPress: PropTypes.func
+    onPress: PropTypes.func,
+    color: PropTypes.string
   };
 
   static defaultTypes = {
-    opacity: 255
+    color: 'white'
   }
 
   render() {
@@ -23,7 +24,7 @@ export default class TextButton extends Component {
         onPress={this.props.onPress}
       >
         <View style={styles.button}>
-          <Text style={styles.text}>{this.props.text}</Text>
+          <Text style={{fontSize:20, color: this.props.color}}>{this.props.text}</Text>
         </View>
       </TouchableOpacity>
     );
@@ -33,9 +34,5 @@ export default class TextButton extends Component {
 const styles = StyleSheet.create({
   button: {
     height: 25
-  },
-  text: {
-    fontSize: 20,
-    color: 'white'
   }
 });
