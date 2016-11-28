@@ -19,14 +19,14 @@ export default class Button extends Component {
       return (
         <TouchableNativeFeedback
           onPress={this.props.onPress}>
-          <View style={{flex: 1, height: 65, backgroundColor: '#046ada', alignItems:'center', justifyContent:'center'}}>
+          <View style={styles.button}>
             <Text style={styles.text}>{this.props.text}</Text>
           </View>
         </TouchableNativeFeedback>
       );
     } else if (Platform.OS === 'ios') {
       return (
-        <View style={{height: 65, backgroundColor: '#046ada', alignItems:'center', justifyContent:'center'}}>
+        <View style={styles.button}>
           <Text style={styles.text}>{this.props.text}</Text>
         </View>
       );
@@ -37,6 +37,13 @@ export default class Button extends Component {
 const styles = StyleSheet.create({
   text: {
     color: 'white',
-    fontSize: 20
+    fontSize: 23
+  },
+  button: {
+    height: 65,
+    backgroundColor: '#046ada',
+    alignItems:'center',
+    justifyContent:'center',
+    borderRadius: 3
   }
 });
