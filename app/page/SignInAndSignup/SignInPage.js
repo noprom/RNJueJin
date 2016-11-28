@@ -4,6 +4,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import Button from './Button';
 import TextButton from './TextButton';
 import SignUpPage from './SignUpPage';
+import ImageButton from './ImageButton';
 
 export default class SignInPage extends Component {
 
@@ -34,7 +35,7 @@ export default class SignInPage extends Component {
           </TouchableOpacity>
         </View>
         <View style={styles.logo}>
-          <Image style={{width:80, height:80}} source={require('../../image/ic_login_logo.png')} />
+          <Image style={{width:60, height:60}} source={require('../../image/ic_login_logo.png')} />
         </View>
         <View style={styles.editGroup}>
           <View style={styles.editView}>
@@ -44,7 +45,7 @@ export default class SignInPage extends Component {
               placeholder="手机号/邮箱"
               placeholderTextColor="#c4c4c4"/>
           </View>
-          <View style={{height: 1, backgroundColor:'#c4c4c4'}}/>
+          {/*<View style={{height: 1, backgroundColor:'#c4c4c4'}}/>*/}
           <View style={styles.editView}>
             <TextInput
               style={styles.edit}
@@ -52,12 +53,19 @@ export default class SignInPage extends Component {
               placeholder="密码"
               placeholderTextColor="#c4c4c4"/>
           </View>
-          <View style={{marginTop: 20}}>
+          <View style={{marginTop: 10}}>
             <Button text="登录" onPress={this._signInCallback.bind(this)}/>
           </View>
           <View style={styles.textButtonLine}>
             <TextButton text="忘记密码?" onPress={this._forgetPassword.bind(this)} color="rgba(255,255,255,0.5)"/>
             <TextButton text="注册账号" onPress={this._signUpCallback.bind(this)}/>
+          </View>
+          <View>
+            <View style={styles.thirdPartyView}>
+              <ImageButton text="微博" image={require('../../image/weibo_login.png')}/>
+              <ImageButton text="微信" image={require('../../image/wechat_login.png')}/>
+              <ImageButton text="Github" image={require('../../image/github_login.png')}/>
+            </View>
           </View>
         </View>
       </View>
@@ -82,15 +90,15 @@ const styles = StyleSheet.create({
     margin: 20
   },
   editView: {
-    height: 65,
+    height: 45,
+    marginBottom: 3,
     backgroundColor: 'white',
     justifyContent: 'flex-end',
-    borderTopLeftRadius: 3,
-    borderTopRightRadius: 3
+    borderRadius: 3
   },
   edit: {
-    height: 45,
-    fontSize: 20,
+    height: 25,
+    fontSize: 14,
     backgroundColor: '#fff',
     marginLeft: 20,
     marginRight: 20,
@@ -100,5 +108,10 @@ const styles = StyleSheet.create({
     marginTop: 25,
     flexDirection: 'row',
     justifyContent: 'space-between'
+  },
+  thirdPartyView: {
+    marginTop: 25,
+    flexDirection: 'row',
+    justifyContent: 'space-around'
   }
 });

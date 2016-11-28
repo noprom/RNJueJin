@@ -32,12 +32,12 @@ const styles = StyleSheet.create({
   view: {
     alignItems: 'center'
   },
-  image: {
-    width: 70,
-    height: 70
+  img: {
+    width: 50,
+    height: 50
   },
   text: {
-    fontSize: 20,
+    fontSize: 16,
     color: 'rgba(255,255,255,0.7)'
   }
 });
