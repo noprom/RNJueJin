@@ -7,6 +7,7 @@ import HomeFragment from '../page/HomeFragment';
 import CompassFragment from '../page/CompassFragment';
 import MeFragment from '../page/MeFragment';
 import NotifyFragment from '../page/NotifyFragment';
+import px2dp from '../util/px2dp';
 
 export default class TabBar extends Component {
   static defaultProps = {
