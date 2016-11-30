@@ -8,7 +8,7 @@ import {
   TouchableHighlight,
   TouchableNativeFeedback
 } from 'react-native';
-import px2dp from '../../util/px2dp';
+import px2dp from '../util/px2dp';
 
 export default class Button extends Component {
   static propTypes = {

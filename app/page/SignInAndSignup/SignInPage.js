@@ -2,12 +2,12 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, PixelRatio, Platform, TouchableOpacity, Image, TextInput } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
-import Button from './Button';
-import TextButton from './TextButton';
+import Button from '../../component/Button';
+import TextButton from '../../component/TextButton';
 import SignUpPage from './SignUpPage';
 import MainPage from '../MainPage';
-import ImageButton from './ImageButton';
-import TextDivider from './TextDivider';
+import ImageButton from '../../component/ImageButtonWithText';
+import TextDivider from '../../component/TextDivider';
 import px2dp from '../../util/px2dp';
 
 export default class SignInPage extends Component {
@@ -74,9 +74,9 @@ export default class SignInPage extends Component {
               <TextDivider text="使用其他账号登陆"/>
             </View>
             <View style={styles.thirdPartyView}>
-              <ImageButton text="微博" image={require('../../image/weibo_login.png')}/>
-              <ImageButton text="微信" image={require('../../image/wechat_login.png')}/>
-              <ImageButton text="Github" image={require('../../image/github_login.png')}/>
+              <ImageButton text="微博" image={require('../../image/weibo_login.png')} color="rgba(255,255,255,0.7)"/>
+              <ImageButton text="微信" image={require('../../image/wechat_login.png')} color="rgba(255,255,255,0.7)"/>
+              <ImageButton text="Github" image={require('../../image/github_login.png')} color="rgba(255,255,255,0.7)"/>
             </View>
           </View>
         </View>
@@ -112,9 +112,9 @@ const styles = StyleSheet.create({
     height: px2dp(38),
     fontSize: px2dp(13),
     backgroundColor: '#fff',
-    paddingLeft: px2dp(10),
-    paddingRight: px2dp(3),
-    marginBottom: px2dp(3)
+    paddingLeft: px2dp(15),
+    paddingRight: px2dp(15),
+    marginBottom: px2dp(13)
   },
   textButtonLine: {
     marginTop: px2dp(25),

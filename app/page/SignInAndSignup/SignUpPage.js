@@ -10,7 +10,7 @@ import {
   TextInput
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
-import Button from './Button';
+import Button from '../../component/Button';
 import px2dp from '../../util/px2dp';
 
 export default class SignUpPage extends Component {
@@ -91,8 +91,8 @@ const styles = StyleSheet.create({
     height: px2dp(38),
     fontSize: px2dp(13),
     backgroundColor: '#fff',
-    paddingLeft: px2dp(10),
-    paddingRight: px2dp(3),
-    marginBottom: px2dp(3)
+    paddingLeft: px2dp(15),
+    paddingRight: px2dp(15),
+    marginBottom: px2dp(13)
   }
 });

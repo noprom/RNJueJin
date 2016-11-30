@@ -6,7 +6,7 @@ import {
   StyleSheet,
   PixelRatio
 } from 'react-native';
-import px2dp from '../../util/px2dp';
+import px2dp from '../util/px2dp';
 
 export default class TextDivider extends Component {
   static propTypes = {
