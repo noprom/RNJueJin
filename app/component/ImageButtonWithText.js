@@ -27,7 +27,7 @@
          const {text, image, icon, onPress, color, imgSize, fontSize, btnStyle} = this.props;
 
          if (Platform.OS === 'ios') {
-             if (image) {
+             if (image && text) {
                  return (
                      <TouchableOpacity onPress={onPress}>
                          <View style={[styles.view, btnStyle]}>
@@ -36,7 +36,7 @@
                          </View>
                      </TouchableOpacity>
                  );
-             } else if (icon) {
+             } else if (icon && text) {
                  return (
                      <TouchableOpacity onPress={onPress}>
                          <View style={[styles.view, btnStyle]}>
@@ -45,9 +45,25 @@
                          </View>
                      </TouchableOpacity>
                  );
+             } else if (image) {
+               return (
+                 <TouchableOpacity onPress={onPress}>
+                    <View style={[styles.view, btnStyle]}>
+                      <Image source={image} style={{width: imgSize, height: imgSize}}/>
+                    </View>
+                  </TouchableOpacity>
+               );
+             } else if (icon) {
+               return (
+                 <TouchableOpacity onPress={onPress}>
+                    <View style={[styles.view, btnStyle]}>
+                      <Icon name={icon} size={imgSize} color={color}/>
+                    </View>
+                 </TouchableOpacity>
+               );
              }
          } else if (Platform.OS === 'android') {
-             if (image) {
+             if (image && text) {
                  return (
                      <TouchableNativeFeedback onPress={onPress}>
                          <View style={[styles.view, btnStyle]}>
@@ -56,7 +72,7 @@
                          </View>
                      </TouchableNativeFeedback>
                  );
-             } else if (icon) {
+             } else if (icon && text) {
                  return (
                      <TouchableNativeFeedback onPress={onPress}>
                          <View style={[styles.view, btnStyle]}>
@@ -65,6 +81,22 @@
                          </View>
                      </TouchableNativeFeedback>
                  );
+             } else if (image) {
+               return (
+                 <TouchableNativeFeedback onPress={onPress}>
+                     <View style={[styles.view, btnStyle]}>
+                        <Image source={image} style={{width: imgSize, height: imgSize}}/>
+                     </View>
+                 </TouchableNativeFeedback>
+               );
+             } else if (icon) {
+               return (
+                 <TouchableNativeFeedback onPress={onPress}>
+                    <View style={[styles.view, btnStyle]}>
+                      <Icon name={icon} size={imgSize} color={color}/>
+                    </View>
+                 </TouchableNativeFeedback>
+               );
              }
          }
      }
