@@ -92,7 +92,7 @@ const ScrollableTabBar = React.createClass({
 
    necessarilyMeasurementsCompleted(position, isLastTab) {
        return this._tabsMeasurements[position] &&
-           (isLastTab || this._tabsMeasurements[position  1]) &&
+           (isLastTab || this._tabsMeasurements[position + 1]) &&
            this._tabContainerMeasurements &&
            this._containerMeasurements;
    },
@@ -100,11 +100,11 @@ const ScrollableTabBar = React.createClass({
    updateTabPanel(position, pageOffset) {
        const containerWidth = this._containerMeasurements.width;
        const tabWidth = this._tabsMeasurements[position].width;
-       const nextTabMeasurements = this._tabsMeasurements[position  1];
+       const nextTabMeasurements = this._tabsMeasurements[position + 1];
        const nextTabWidth = nextTabMeasurements && nextTabMeasurements.width || 0;
        const tabOffset = this._tabsMeasurements[position].left;
        const absolutePageOffset = pageOffset * tabWidth;
-       let newScrollX = tabOffset  absolutePageOffset;
+       let newScrollX = tabOffset + absolutePageOffset;
 
        // center tab and smooth tab change (for when tabWidth changes a lot between two tabs)
        newScrollX -= (containerWidth - (1 - pageOffset) * tabWidth - pageOffset * nextTabWidth) / 2;
@@ -125,11 +125,11 @@ const ScrollableTabBar = React.createClass({
        const lineRight = this._tabsMeasurements[position].right;
 
        if (position < tabCount - 1) {
-           const nextTabLeft = this._tabsMeasurements[position  1].left;
-           const nextTabRight = this._tabsMeasurements[position  1].right;
+           const nextTabLeft = this._tabsMeasurements[position + 1].left;
+           const nextTabRight = this._tabsMeasurements[position + 1].right;
 
-           const newLineLeft = (pageOffset * nextTabLeft  (1 - pageOffset) * lineLeft);
-           const newLineRight = (pageOffset * nextTabRight  (1 - pageOffset) * lineRight);
+           const newLineLeft = (pageOffset * nextTabLeft + (1 - pageOffset) * lineLeft);
+           const newLineRight = (pageOffset * nextTabRight + (1 - pageOffset) * lineRight);
 
            this.state._leftTabUnderline.setValue(newLineLeft);
            this.state._widthTabUnderline.setValue(newLineRight - newLineLeft);
@@ -161,7 +161,7 @@ const ScrollableTabBar = React.createClass({
 
    measureTab(page, event) {
        const { x, width, height, } = event.nativeEvent.layout;
-       this._tabsMeasurements[page] = {left: x, right: x  width, width, height, };
+       this._tabsMeasurements[page] = {left: x, right: x + width, width, height, };
        this.updateView({value: this.props.scrollValue._value, });
    },
 

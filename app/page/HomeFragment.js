@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Text, View, StyleSheet, Platform } from 'react-native';
 import theme from '../config/theme';
 import px2dp from '../util/px2dp';
-import ScrollableTabView, {ScrollableTabBar} from 'react-native-scrollable-tab-view';
+import ScrollableTabView from 'react-native-scrollable-tab-view';
 import CustomTabBar from '../component/CustomTabBar';
 import HomeTab from './HomeTabPages/HomeTab';
 
