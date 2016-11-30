@@ -8,6 +8,7 @@ import SignUpPage from './SignUpPage';
 import MainPage from '../MainPage';
 import ImageButton from './ImageButton';
 import TextDivider from './TextDivider';
+import px2dp from '../../util/px2dp';
 
 export default class SignInPage extends Component {
 
@@ -61,7 +62,7 @@ export default class SignInPage extends Component {
               placeholder="密码"
               placeholderTextColor="#c4c4c4"/>
           </View>
-          <View style={{marginTop: 10}}>
+          <View style={{marginTop: px2dp(10)}}>
             <Button text="登录" onPress={this._signInCallback.bind(this)}/>
           </View>
           <View style={styles.textButtonLine}>
@@ -69,7 +70,7 @@ export default class SignInPage extends Component {
             <TextButton text="注册账号" onPress={this._signUpCallback.bind(this)} color="rgba(255,255,255,0.5)"/>
           </View>
           <View>
-            <View style={{flex: 1, justifyContent: 'flex-end', margin: 5}}>
+            <View style={{flex: 1, justifyContent: 'flex-end', margin: px2dp(5)}}>
               <TextDivider text="使用其他账号登陆"/>
             </View>
             <View style={styles.thirdPartyView}>
@@ -87,41 +88,41 @@ export default class SignInPage extends Component {
 const styles = StyleSheet.create({
   view: {
     flex: 1,
-    marginTop: (Platform.OS === 'ios') ? 20 : 0,
+    marginTop: (Platform.OS === 'ios') ? px2dp(20) : 0,
     backgroundColor: 'rgb(22, 131, 251)'
   },
   actionBar: {
-    margin: 20
+    margin: px2dp(20)
   },
   logo: {
     alignItems: 'center',
-    marginTop: 40
+    marginTop: px2dp(40)
   },
   editGroup: {
-    margin: 20
+    margin: px2dp(20)
   },
   editView: {
-    height: 45,
-    marginBottom: 3,
+    height: px2dp(45),
+    marginBottom: px2dp(3),
     backgroundColor: 'white',
     justifyContent: 'flex-end',
-    borderRadius: 3
+    borderRadius: px2dp(3)
   },
   edit: {
-    height: 38,
-    fontSize: 13,
+    height: px2dp(38),
+    fontSize: px2dp(13),
     backgroundColor: '#fff',
-    paddingLeft: 10,
-    paddingRight: 3,
-    marginBottom: 3
+    paddingLeft: px2dp(10),
+    paddingRight: px2dp(3),
+    marginBottom: px2dp(3)
   },
   textButtonLine: {
-    marginTop: 25,
+    marginTop: px2dp(25),
     flexDirection: 'row',
     justifyContent: 'space-between'
   },
   thirdPartyView: {
-    marginTop: 25,
+    marginTop: px2dp(25),
     flexDirection: 'row',
     justifyContent: 'space-around'
   }

@@ -8,6 +8,7 @@ import {
   TouchableHighlight,
   TouchableNativeFeedback
 } from 'react-native';
+import px2dp from '../../util/px2dp';
 
 export default class Button extends Component {
   static propTypes = {
@@ -40,13 +41,13 @@ export default class Button extends Component {
 const styles = StyleSheet.create({
   text: {
     color: 'white',
-    fontSize: 23
+    fontSize: px2dp(13)
   },
   button: {
-    height: 45,
+    height: px2dp(45),
     backgroundColor: '#046ada',
     alignItems:'center',
     justifyContent:'center',
-    borderRadius: 2
+    borderRadius: px2dp(2)
   }
 });

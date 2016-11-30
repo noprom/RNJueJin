@@ -6,6 +6,7 @@ import {
   StyleSheet,
   PixelRatio
 } from 'react-native';
+import px2dp from '../../util/px2dp';
 
 export default class TextDivider extends Component {
   static propTypes = {
@@ -35,8 +36,8 @@ const styles = StyleSheet.create({
   },
   text: {
     color: '#3d3d3d',
-    fontSize: 10,
-    marginLeft: 9,
-    marginRight: 9
+    fontSize: px2dp(10),
+    marginLeft: px2dp(9),
+    marginRight: px2dp(9)
   }
 });

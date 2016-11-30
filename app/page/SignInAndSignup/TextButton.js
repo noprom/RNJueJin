@@ -7,6 +7,7 @@ import {
   Platform,
   TouchableOpacity
 } from 'react-native';
+import px2dp from '../../util/px2dp';
 
 export default class TextButton extends Component {
   static propTypes = {
@@ -25,7 +26,7 @@ export default class TextButton extends Component {
         onPress={this.props.onPress}
       >
         <View style={styles.button}>
-          <Text style={{fontSize: 12, color: this.props.color}}>{this.props.text}</Text>
+          <Text style={{fontSize: px2dp(12), color: this.props.color}}>{this.props.text}</Text>
         </View>
       </TouchableOpacity>
     );
@@ -34,6 +35,6 @@ export default class TextButton extends Component {
 
 const styles = StyleSheet.create({
   button: {
-    height: 16
+    height: px2dp(16)
   }
 });

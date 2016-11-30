@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, Platform } from 'react-native';
 import theme from '../config/theme';
+import px2dp from '../util/px2dp';
 
 export default class HomeFragment extends Component {
   render() {
@@ -16,7 +17,7 @@ export default class HomeFragment extends Component {
 const styles = StyleSheet.create({
   view: {
     flex: 1,
-    marginTop: (Platform.OS === 'ios') ? 20 : 0
+    marginTop: (Platform.OS === 'ios') ? px2dp(20) : 0
   },
   text: {
     color: theme.text.color,
