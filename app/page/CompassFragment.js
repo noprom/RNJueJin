@@ -18,7 +18,7 @@ export default class CompassFragment extends Component {
         <SearchBar onPress={this._searchButtonCallback.bind(this)}/>
         <Swiper
             height={px2dp(130)}
-            autoplay={false}
+            autoplay={true}
             bounces={true}>
             <View style={styles.slide}>
                 {/*<Image style={styles.image} source={BANNER_IMAGES[0]}/>*/}
@@ -45,6 +45,6 @@ const styles = StyleSheet.create({
     backgroundColor: theme.pageBackgroundColor
   },
   slide: {
-    
+
   }
 });

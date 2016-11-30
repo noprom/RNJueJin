@@ -27,7 +27,12 @@ export default class SignUpPage extends Component {
     return(
       <View style={styles.view}>
         <View style={styles.actionBar}>
-          <ImageButton onPress={this._backCallback.bind(this)} icon="md-arrow-back" color="white" imgSize={px2dp(18)} btnStyle={{width: 55, height: 60}}/>
+          <ImageButton
+            onPress={this._backCallback.bind(this)}
+            icon="md-arrow-back"
+            color="white"
+            imgSize={px2dp(18)}
+            btnStyle={{width: 55, height: 60}}/>
         </View>
         <View style={styles.logo}>
           <Image source={require('../../image/ic_launcher.png')} />
@@ -82,12 +87,12 @@ const styles = StyleSheet.create({
   editView: {
     height: px2dp(65),
     backgroundColor: 'white',
-    justifyContent: 'flex-end',
+    justifyContent: 'center',
     borderTopLeftRadius: px2dp(3),
-    borderTopRightRadius: px2dp(3)
+    borderTopRightRadius: px2dp(3),
   },
   edit: {
-    height: px2dp(38),
+    height: px2dp(35),
     fontSize: px2dp(13),
     backgroundColor: '#fff',
     paddingLeft: px2dp(15),

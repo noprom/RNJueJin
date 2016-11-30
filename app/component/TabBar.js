@@ -82,7 +82,7 @@ export default class TabBar extends Component {
 
 const styles = StyleSheet.create({
   tabbar: {
-    height: px2dp(35),
+    height: px2dp(49),
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#fff'
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
     padding: px2dp(8)
   },
   tab: {
-    width: px2dp(18),
-    height: px2dp(18)
+    width: px2dp(22),
+    height: px2dp(22)
   }
 });
