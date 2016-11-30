@@ -6,7 +6,7 @@ import px2dp from '../util/px2dp';
 export default class MeFragment extends Component {
   render() {
     return (
-      <View style={styles.view}>
+      <View style={styles.container}>
         <Text>MeFragment</Text>
       </View>
     );
@@ -14,7 +14,7 @@ export default class MeFragment extends Component {
 }
 
 const styles = StyleSheet.create({
-  view: {
+  container: {
     flex: 1,
     marginTop: (Platform.OS === 'ios') ? px2dp(20) : 0
   }
