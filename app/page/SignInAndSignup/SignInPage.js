@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgb(22, 131, 251)'
   },
   actionBar: {
-    margin: px2dp(20)
+    padding: px2dp(20)
   },
   logo: {
     alignItems: 'center',
