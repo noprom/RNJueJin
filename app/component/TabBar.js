@@ -18,7 +18,7 @@ export default class TabBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedTab: 'me'
+      selectedTab: 'compass'
     }
   }
 
