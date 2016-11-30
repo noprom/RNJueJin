@@ -38,9 +38,7 @@ export default class SignInPage extends Component {
     return (
       <View style={styles.view}>
         <View style={styles.actionBar}>
-          <TouchableOpacity onPress={this._backCallback.bind(this)}>
-            <Icon name="md-arrow-back" size={18} color="white"/>
-          </TouchableOpacity>
+          <ImageButton onPress={this._backCallback.bind(this)} icon="md-arrow-back" color="white" imgSize={px2dp(18)} btnStyle={{width: 50, height: 60}}/>
         </View>
         <View style={styles.logo}>
           <Image style={{width:45, height:45}} source={require('../../image/ic_login_logo.png')} />
@@ -114,7 +112,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     paddingLeft: px2dp(15),
     paddingRight: px2dp(15),
-    marginBottom: px2dp(13)
+    marginBottom: px2dp(13),
+    borderRadius: px2dp(3)
   },
   textButtonLine: {
     marginTop: px2dp(25),
@@ -122,6 +121,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between'
   },
   thirdPartyView: {
+    alignItems: 'flex-start',
     marginTop: px2dp(25),
     flexDirection: 'row',
     justifyContent: 'space-around'
