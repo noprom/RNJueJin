@@ -17,16 +17,17 @@ export default class HotPanel extends Component {
         return(
             <View style={styles.container}>
                 <View style={styles.title}>
-                    <View style={{flexDirection: 'row'}}>
+                    <View style={styles.cell}>
                         <Icon name="flame" color={theme.themeColor} size={15}/>
-                        <Text style={{color: theme.themeColor}}>{title}</Text>
+                        <Text style={{color: theme.themeColor, fontSize: theme.scrollView.fontSize, marginLeft: 5}}>{title}</Text>
                     </View>
-                    <View style={{flexDirection: 'row'}}>
-                        <TouchableOpacity>
-                            <Icon name="sync" color="#c4c4c4" size={15} />
+                    <View style={styles.cell}>
+                        <TouchableOpacity
+                            style={{marginRight: 15}}>
+                            <Icon name="sync" color="#c4c4c4" size={20} />
                         </TouchableOpacity>
                         <TouchableOpacity>
-                            <Icon name="x" color="#c4c4c4" size={15} />
+                            <Icon name="x" color="#c4c4c4" size={20} />
                         </TouchableOpacity>
                     </View>
                 </View>
@@ -37,12 +38,18 @@ export default class HotPanel extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#fff'
+        backgroundColor: '#fff',
+        marginTop: 12
+    },
+    cell: {
+      flexDirection: 'row',
+      alignItems: 'center'
     },
     title: {
         flexDirection: 'row',
-        height: px2dp(20),
         width: Dimensions.get('window').width,
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        paddingLeft: px2dp(15),
+        paddingRight: px2dp(15)
     }
 });
