@@ -1,7 +1,7 @@
 'use strict';
 
 import React, { Component, PropTypes } from 'react';
-import { StyleSheet, View, Text, Dimensions, TouchableOpacity, PixelRatio } from 'react-native';
+import { StyleSheet, View, Text, Image, Dimensions, TouchableOpacity, PixelRatio } from 'react-native';
 import px2dp from '../util/px2dp';
 import Icon from 'react-native-vector-icons/Octicons';
 import theme from '../config/theme';
@@ -25,6 +25,10 @@ export default class HotPanel extends Component {
     }
 
     _refreshBtnCallback() {
+
+    }
+
+    _hotPanelCallback() {
 
     }
 
@@ -57,7 +61,25 @@ export default class HotPanel extends Component {
                    </View>
                    <View style={{height: 1 / PixelRatio.get(), backgroundColor: '#f1f1f1'}}></View>
                    <View style={styles.list}>
-
+                       <TouchableOpacity
+                          onPress={this._hotPanelCallback.bind(this)}>
+                         <View style={styles.listItem}>
+                             <View style={{flex: 75}}>
+                                 <Text style={styles.content}>仅2步实现 拜拜 汉堡导航栏效果～全新底部导航交互</Text>
+                                 <View style={styles.infoBar}>
+                                     <Icon name="heart" size={13} color={theme.grayColor}/>
+                                     <Text style={styles.infoBarText}>234</Text>
+                                     <Icon name="person" size={12} color={theme.grayColor}/>
+                                     <Text style={styles.infoBarText}>Android</Text>
+                                     <Icon name="clock" size={13} color={theme.grayColor}/>
+                                     <Text style={styles.infoBarText}>1周前</Text>
+                                 </View>
+                             </View>
+                             <View style={{flex: 25, flexDirection: 'row', justifyContent: 'flex-end', alignItems: 'center'}}>
+                                 <Image style={styles.image} source={require('../image/logo_og.png')} resizeMode="stretch"/>
+                             </View>
+                         </View>
+                       </TouchableOpacity>
                    </View>
                </View>
           )
@@ -78,12 +100,36 @@ const styles = StyleSheet.create({
     },
     title: {
         flexDirection: 'row',
-        width: Dimensions.get('window').width,
+        width: theme.screenWidth,
         justifyContent: 'space-between',
         paddingLeft: px2dp(15),
         paddingRight: px2dp(15)
     },
     list: {
-      height: px2dp(30)
+      width: theme.screenWidth,
+    },
+    listItem: {
+        height: px2dp(90),
+        flexDirection: 'row',
+        paddingLeft: px2dp(20),
+        paddingRight: px2dp(15),
+        alignItems: 'center'
+    },
+    content: {
+        color: '#000',
+        fontSize: px2dp(15),
+    },
+    image: {
+        height: px2dp(60),
+        width: px2dp(60)
+    },
+    infoBar: {
+        flexDirection: 'row',
+        marginTop: px2dp(8)
+    },
+    infoBarText: {
+        fontSize: px2dp(10),
+        marginRight: px2dp(12),
+        color: theme.grayColor
     }
 });

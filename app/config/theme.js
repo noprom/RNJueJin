@@ -1,11 +1,14 @@
 'use strict';
-import { PixelRatio } from 'react-native';
+import { PixelRatio, Dimensions } from 'react-native';
 import px2dp from '../util/px2dp';
 
 const globalTextColor = '#000';
 
 module.exports = {
+  screenWidth: Dimensions.get('window').width,
+  screenHeight: Dimensions.get('window').height,
   themeColor: 'rgb(22,131,251)',
+  grayColor: '#c4c4c4',
   pageBackgroundColor: '#f4f4f4',
   actionBar: {
       height: px2dp(49),
