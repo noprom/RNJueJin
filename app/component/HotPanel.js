@@ -61,60 +61,59 @@ export default class HotPanel extends Component {
                    </View>
                    <View style={{height: 1 / PixelRatio.get(), backgroundColor: '#f1f1f1'}}></View>
                    <View style={styles.list}>
-                      {
-                        contents.map((item, index) => {
-                          if(Platform.OS === 'ios') {
-                           return(
-                               <TouchableOpacity
-                                   key={index}
-                                   onPress={this._hotPanelCallback.bind(this, item.url)}>
-                                   <View>
-                                       <View style={styles.listItem}>
-                                           <View style={{flex: 75, marginTop: px2dp(15)}}>
-                                               <Text style={styles.content}>{item.title}</Text>
-                                               <View style={styles.infoBar}>
-                                                   <Icon name="heart" size={px2dp(13)} color={theme.grayColor}/>
-                                                   <Text style={styles.infoBarText}>{item.star}</Text>
-                                                   <Icon name="person" size={px2dp(12)} color={theme.grayColor}/>
-                                                   <Text style={styles.infoBarText}>{item.author}</Text>
-                                                   <Icon name="clock" size={px2dp(13)} color={theme.grayColor}/>
-                                                   <Text style={styles.infoBarText}>{item.time}</Text>
-                                               </View>
-                                           </View>
-                                           <View style={{flex: 25, flexDirection: 'row', justifyContent: 'flex-end', alignItems: 'center'}}>
-                                               <Image style={styles.image} source={require('../image/logo_og.png')} resizeMode="stretch"/>
+                   {contents.map((item, index) => {
+                       if(Platform.OS === 'ios') {
+                       return(
+                           <TouchableOpacity
+                               key={index}
+                               onPress={this._hotPanelCallback.bind(this, item.url)}>
+                               <View>
+                                   <View style={styles.listItem}>
+                                       <View style={{flex: 75, marginTop: px2dp(15)}}>
+                                           <Text style={styles.content}>{item.title}</Text>
+                                           <View style={styles.infoBar}>
+                                               <Icon name="heart" size={px2dp(13)} color={theme.grayColor}/>
+                                               <Text style={styles.infoBarText}>{item.star}</Text>
+                                               <Icon name="person" size={px2dp(12)} color={theme.grayColor}/>
+                                               <Text style={styles.infoBarText}>{item.author}</Text>
+                                               <Icon name="clock" size={px2dp(13)} color={theme.grayColor}/>
+                                               <Text style={styles.infoBarText}>{item.time}</Text>
                                            </View>
                                        </View>
-                                       <View style={{height: 1/PixelRatio.get(), backgroundColor: '#f1f1f1'}}></View>
-                                 </View>
-                               </TouchableOpacity>
-                           )
-                         }else if(Platform.OS === 'android'){
-                          return(
-                             <TouchableNativeFeedback
-                                 key={index}
-                                 onPress={this._hotPanelCallback.bind(this, item.url)}>
-                                 <View>
-                                     <View style={styles.listItem}>
-                                         <View style={{flex: 75, marginTop: px2dp(15)}}>
-                                             <Text style={styles.content}>{item.title}</Text>
-                                             <View style={styles.infoBar}>
-                                                 <Icon name="heart" size={px2dp(13)} color={theme.grayColor}/>
-                                                 <Text style={styles.infoBarText}>{item.star}</Text>
-                                                 <Icon name="person" size={px2dp(12)} color={theme.grayColor}/>
-                                                 <Text style={styles.infoBarText}>{item.author}</Text>
-                                                 <Icon name="clock" size={px2dp(13)} color={theme.grayColor}/>
-                                                 <Text style={styles.infoBarText}>{item.time}</Text>
-                                             </View>
-                                         </View>
-                                         <View style={{flex: 25, flexDirection: 'row', justifyContent: 'flex-end', alignItems: 'center'}}>
-                                             <Image style={styles.image} source={require('../image/logo_og.png')} resizeMode="stretch"/>
-                                         </View>
-                                     </View>
-                                     <View style={{height: 1/PixelRatio.get(), backgroundColor: '#f1f1f1'}}></View>
-                                 </View>
-                             </TouchableNativeFeedback>
-                         )}})
+                                       <View style={{flex: 25, flexDirection: 'row', justifyContent: 'flex-end', alignItems: 'center'}}>
+                                           <Image style={styles.image} source={require('../image/logo_og.png')} resizeMode="stretch"/>
+                                       </View>
+                                   </View>
+                                   <View style={{height: 1/PixelRatio.get(), backgroundColor: '#f1f1f1'}}></View>
+                             </View>
+                           </TouchableOpacity>
+                       )
+                     } else if(Platform.OS === 'android') {
+                       return(
+                           <TouchableNativeFeedback
+                               key={index}
+                               onPress={this._hotPanelCallback.bind(this, item.url)}>
+                               <View>
+                                   <View style={styles.listItem}>
+                                       <View style={{flex: 75, marginTop: px2dp(15)}}>
+                                           <Text style={styles.content}>{item.title}</Text>
+                                           <View style={styles.infoBar}>
+                                               <Icon name="heart" size={px2dp(13)} color={theme.grayColor}/>
+                                               <Text style={styles.infoBarText}>{item.star}</Text>
+                                               <Icon name="person" size={px2dp(12)} color={theme.grayColor}/>
+                                               <Text style={styles.infoBarText}>{item.author}</Text>
+                                               <Icon name="clock" size={px2dp(13)} color={theme.grayColor}/>
+                                               <Text style={styles.infoBarText}>{item.time}</Text>
+                                           </View>
+                                       </View>
+                                       <View style={{flex: 25, flexDirection: 'row', justifyContent: 'flex-end', alignItems: 'center'}}>
+                                           <Image style={styles.image} source={require('../image/logo_og.png')} resizeMode="stretch"/>
+                                       </View>
+                                   </View>
+                                   <View style={{height: 1/PixelRatio.get(), backgroundColor: '#f1f1f1'}}></View>
+                               </View>
+                           </TouchableNativeFeedback>
+                       )}})
                       }
                    </View>
                </View>
@@ -128,7 +127,7 @@ export default class HotPanel extends Component {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: '#fff',
-        marginTop: 12
+        marginTop: px2dp(12)
     },
     cell: {
       flexDirection: 'row',
