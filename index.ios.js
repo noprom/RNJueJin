@@ -6,7 +6,7 @@
 
 import React, { Component } from 'react';
 import { AppRegistry } from 'react-native';
-import Navigation from './js/config/entry';
+import Navigation from './app/config/entry';
 
 export default class RNJueJin extends Component {
   render() {
