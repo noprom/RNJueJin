@@ -9,6 +9,7 @@ import {
   TouchableNativeFeedback
 } from 'react-native';
 import px2dp from '../util/px2dp';
+import theme from '../config/theme';
 
 export default class Button extends Component {
   static propTypes = {
@@ -28,7 +29,9 @@ export default class Button extends Component {
       );
     } else if (Platform.OS === 'ios') {
       return (
-        <TouchableHighlight onPress={this.props.onPress}>
+        <TouchableHighlight
+          onPress={this.props.onPress}
+          activeOpacity={theme.btnActiveOpacity}>
           <View style={styles.button}>
             <Text style={styles.text}>{this.props.text}</Text>
           </View>

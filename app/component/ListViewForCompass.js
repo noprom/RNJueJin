@@ -70,7 +70,8 @@ export default class ListViewForCompass extends Component {
     if(Platform.OS === 'ios') {
         return (
             <TouchableOpacity
-                onPress={this._itemClickCallback.bind(this, rowData.url)}>
+                onPress={this._itemClickCallback.bind(this, rowData.url)}
+                activeOpacity={theme.btnActiveOpacity}>
                 <View>
                     <View style={{height: 1 / PixelRatio.get(), backgroundColor: '#f1f1f1'}}/>
                     <View style={styles.item}>

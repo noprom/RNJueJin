@@ -1,11 +1,12 @@
 'use strict';
 
- import React, {Component, PropTypes} from 'react';
- import ReactNative, {Text, View, StyleSheet, Platform, TouchableOpacity, TouchableNativeFeedback, Image} from 'react-native';
- import px2dp from '../util/px2dp';
- import Icon from 'react-native-vector-icons/Ionicons';
+import React, {Component, PropTypes} from 'react';
+import ReactNative, {Text, View, StyleSheet, Platform, TouchableOpacity, TouchableNativeFeedback, Image} from 'react-native';
+import px2dp from '../util/px2dp';
+import Icon from 'react-native-vector-icons/Ionicons';
+import theme from '../config/theme';
 
- export default class ImageButton extends Component {
+export default class ImageButton extends Component {
 
      static propTypes = {
          text: PropTypes.string,
@@ -29,7 +30,7 @@
          if (Platform.OS === 'ios') {
              if (image) {
                  return (
-                     <TouchableOpacity onPress={onPress}>
+                     <TouchableOpacity onPress={onPress} activeOpacity={theme.btnActiveOpacity}>
                          <View style={[styles.view, btnStyle]}>
                              <Image source={image} style={{width: imgSize, height: imgSize}}/>
                              {text ?
@@ -42,7 +43,7 @@
                  );
              } else if (icon) {
                  return (
-                     <TouchableOpacity onPress={onPress}>
+                     <TouchableOpacity onPress={onPress} activeOpacity={theme.btnActiveOpacity}>
                          <View style={[styles.view, btnStyle]}>
                              <Icon name={icon} size={imgSize} color={color}/>
                              {text ?
@@ -85,7 +86,7 @@
      }
  }
 
- const styles = StyleSheet.create({
+const styles = StyleSheet.create({
      view:{
          alignItems: 'center',
          justifyContent: 'center'
@@ -94,4 +95,4 @@
          color: 'rgba(255,255,255,0.7)',
          marginTop: px2dp(4)
      }
- });
+});
