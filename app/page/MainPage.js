@@ -4,18 +4,19 @@ import { Text, View } from 'react-native';
 import TabBar from '../component/TabBar';
 import WebViewPage from './WebViewPage';
 
-export default class MainPage extends Component {
+export default class MainScene extends Component {
   constructor(props){
       super(props);
-      MainScene.switchPage = MainScene.switchPage.bind(this);
+      MainScene.switchWebViewPage = MainScene.switchWebViewPage.bind(this);
   }
 
-  static switchPage() {
+  static switchWebViewPage(url) {
       this.props.navigator.push({
-          component: WebViewPage
+          component: WebViewPage,
+          args: {url: url}
       });
   }
-  
+
   render() {
     return (
       <View style={{flex: 1, justifyContent: 'flex-end'}}>
