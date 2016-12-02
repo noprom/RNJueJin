@@ -14,7 +14,7 @@ export default class WebViewPage extends Component {
 
   render() {
       return(
-          <View style={{flex: 1}}>
+          <View style={styles.container}>
             <NavigationBar userInfo={this.props.user} onPress={this._backCallback.bind(this)}/>
             <WebView
                 source={{uri: this.props.url}}
@@ -43,6 +43,11 @@ export default class WebViewPage extends Component {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    marginTop: (Platform.OS === 'ios') ? px2dp(20) : 0,
+    backgroundColor: theme.pageBackgroundColor
+  },
   webView: {
       padding: 15,
       borderWidth: 2,
