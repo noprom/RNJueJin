@@ -2,22 +2,22 @@ import React, { Component, PropTypes } from 'react';
 import ReactNative, { Text, View, StyleSheet, Platform, PixelRatio, WebView, ToastAndroid } from 'react-native';
 import px2dp from '../util/px2dp';
 import theme from '../config/theme';
+import NavigationBar from '../component/WebViewNavigationBar';
 
 export default class WebViewPage extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      text: 'web'
     };
   }
 
   render() {
       return(
           <View style={{flex: 1}}>
-            <Text>{this.state.text}</Text>
+            <NavigationBar userInfo={this.props.user} onPress={this._backCallback.bind(this)}/>
             <WebView
-                source={{uri: 'http://gold.xitu.io/'}}
+                source={{uri: this.props.url}}
                 style={styles.webView}
                 renderLoading={this._renderLoading.bind(this)}
                 onLoad={this._showTips.bind(this, 'load')}
@@ -27,14 +27,18 @@ export default class WebViewPage extends Component {
       );
   }
 
-  _showTips(msg){
+  _showTips(msg) {
       ToastAndroid.show(msg, ToastAndroid.SHORT);
   }
 
-  _renderLoading(){
+  _renderLoading() {
       return(
           <Text style={{fontSize: 30}}>Loading</Text>
       );
+  }
+
+  _backCallback() {
+      this.props.navigator.pop();
   }
 }
 
