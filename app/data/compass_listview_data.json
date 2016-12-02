@@ -1,0 +1,1013 @@
+{
+    meta: {
+        code: 200
+    },
+    data: {
+        banner: [
+            {
+                tagsTitleArray: [
+                    "前端",
+                    "微信小程序",
+                    "HTTP"
+                ],
+                category: "frontend",
+                tags: {
+                    __type: "Relation",
+                    className: "Tag"
+                },
+                hotIndex: 1597,
+                viewsCount: 670,
+                subscribers: {
+                    __type: "Relation",
+                    className: "_User"
+                },
+                collectionCount: 91,
+                content: "原文链接：www.devsai.com 本篇不讲什么是https，什么是SSL,什么是nginx 想了解这些的请绕道，相信有很多优秀的文章会告诉你。 本篇要讲的在最短的时间内，让你的网站从http升级到https。 开始教程前再说一句：https你值得拥有。 起因 最近段时间，…",
+                hot: false,
+                original: true,
+                type: "post",
+                latestCommentAt: {
+                    __type: "Date",
+                    iso: "2016-11-28T02:04:30.413Z"
+                },
+                title: "微信小程序开发之https从无到有",
+                english: false,
+                rankIndex: 0.2878608570812197,
+                url: "https://gold.xitu.io/entry/583a42fec59e0d006b390c7d/view",
+                entryView: {
+                    __type: "Pointer",
+                    className: "EntryView",
+                    objectId: "583a42feac502e006c1ef4c4"
+                },
+                gfw: false,
+                commentsCount: 3,
+                user: {
+                    username: "devsai",
+                    avatar_large: "https://dn-mhke0kuv.qbox.me/e04b1ffa1172f51c4d70.png?imageView/2/w/100/h/100/q/80/format/png",
+                    avatar_hd: "https://dn-mhke0kuv.qbox.me/e04b1ffa1172f51c4d70.png?imageView/2/w/100/h/100/q/80/format/png",
+                    objectId: "57ad9c0ca633bd0057ed2024",
+                    role: "editor",
+                    company: "喜马拉雅FM",
+                    jobTitle: "前端开发",
+                    self_description: "前端开发，不止于前端开发",
+                    blogAddress: "http://www.devsai.com",
+                    totalHotIndex: 6003,
+                    postedEntriesCount: 2,
+                    collectedEntriesCount: 14,
+                    totalCollectionsCount: 334,
+                    subscribedTagsCount: 16,
+                    followeesCount: 2,
+                    followersCount: 9,
+                    isAuthor: true,
+                    postedPostsCount: 1
+                },
+                subscribersCount: 3,
+                screenshot: {
+                    __type: "File",
+                    id: "583a4e4a128fe1006ab5bb65",
+                    name: "TlQ5V3l5OVFHejZwYU1adG5SMUEwWEg3N0hkM3djL2xUaXd5UGd5SkQxV082QS81ZFVEb2l3PT0.jpg",
+                    url: "https://dn-mhke0kuv.qbox.me/b1c91753cc5b02c109d7.jpg"
+                },
+                originalUrl: "http://juejin.im/post/583a3ef867f356006ba7d459",
+                objectId: "583a42fec59e0d006b390c7d",
+                createdAt: "2016-11-27T02:20:46.582Z",
+                updatedAt: "2016-12-02T00:32:58.906Z",
+                bannerType: "post",
+                className: "Entry",
+                createdAtString: "2016-11-27T02:20:46.582Z",
+                updatedAtString: "2016-12-02T00:32:58.906Z"
+            }
+        ],
+        entry: [
+            {
+                tagsTitleArray: [
+                    "工具资源",
+                    "Android",
+                    "Java"
+                ],
+                category: "android",
+                tags: {
+                    __type: "Relation",
+                    className: "Tag"
+                },
+                hotIndex: 20816,
+                viewsCount: 6939,
+                subscribers: {
+                    __type: "Relation",
+                    className: "_User"
+                },
+                collectionCount: 1378,
+                content: "做这份整理是想把它作为 Android 开发的小字典，当遇到一些琐碎问题时，不用再面向百度或者谷歌查询 API 的使用，费时费力，这里有的话，大家尽管撸走；同时也希望它能逐日壮大起来，期待大家的 Star 和完善，当然我也会一直更新发布版本和日志，为了方便大家导入，现已上传 jcenter；其中很多代码也是汇四方之精华，谢谢前辈们的提供，当然最终还是要通过单元测试的，如有错误，请及时告之。",
+                hot: false,
+                original: true,
+                type: "article",
+                latestCommentAt: {
+                    __type: "Date",
+                    iso: "2016-12-01T14:16:05.329Z"
+                },
+                title: "Android 开发人员不得不收集的代码 (持续更新中)",
+                english: false,
+                rankIndex: 9.662295031653192,
+                url: "https://gold.xitu.io/entry/583cf7bac59e0d006b477dff/view",
+                entryView: {
+                    __type: "Pointer",
+                    className: "EntryView",
+                    objectId: "583d0df3128fe1006ac46d73"
+                },
+                gfw: false,
+                commentsCount: 19,
+                user: {
+                    username: "blankj",
+                    avatar_large: "https://avatars.githubusercontent.com/u/17978187?v=3",
+                    avatar_hd: "https://avatars.githubusercontent.com/u/17978187?v=3",
+                    objectId: "579f5dd1a341310063f9f105",
+                    role: "editor",
+                    company: "https://github.com/Blankj",
+                    jobTitle: "Android开发",
+                    self_description: "羽毛球",
+                    blogAddress: "blankj.com",
+                    totalHotIndex: 42650,
+                    postedEntriesCount: 4,
+                    collectedEntriesCount: 5,
+                    totalCollectionsCount: 2730,
+                    subscribedTagsCount: 2,
+                    followeesCount: 5,
+                    followersCount: 108,
+                    isAuthor: false,
+                    postedPostsCount: 0
+                },
+                subscribersCount: 14,
+                screenshot: {
+                    __type: "File",
+                    id: "583cf7b9a22b9d006a90df19",
+                    name: "tools.png",
+                    url: "https://dn-mhke0kuv.qbox.me/b2ab21c2b58d03200cf9.png"
+                },
+                originalUrl: "https://github.com/Blankj/AndroidUtilCode/blob/master/README-CN.md",
+                objectId: "583cf7bac59e0d006b477dff",
+                createdAt: "2016-11-29T03:36:26.165Z",
+                updatedAt: "2016-12-02T00:42:03.570Z",
+                createdAtString: "2016-11-29T03:36:26.165Z",
+                updatedAtString: "2016-12-02T00:42:03.570Z"
+            },
+            {
+                tagsTitleArray: [
+                    "Android"
+                ],
+                category: "android",
+                tags: {
+                    __type: "Relation",
+                    className: "Tag"
+                },
+                hotIndex: 4211,
+                viewsCount: 1664,
+                subscribers: {
+                    __type: "Relation",
+                    className: "_User"
+                },
+                collectionCount: 254,
+                content: "使用 Rxjava 配合 Retrofit2+okhttp 做网络请求和缓存 使用 RxUtil 对线程操作和网络请求结果处理做了封装 使用 RxManager 对订阅生命周期做了统一管理 使用 RxBus 做了组件间通信 使用 RxPermissions 对 android6.0 进行权限申请 使用 Material Design 控件和动画 使用 MVP 架构整个项目，并且抽取出 core 做为库，导入 core 即可省去 50% 的代码开发哦 使用 Glide 做图片处理和加载 使用 Fragmentation 简化 Fragment 的操作和懒加载 日间和夜间模式切换 添加了图片选择器 (高仿微信) 和表情键盘(支持动态表情) 自己封装了 recyclerview 和 recyclerviewpager 实现下拉刷新，上拉加载更多和pagerview 功能（只需简单几句代码即可实现各种列表，无需 adapter，无需自己设计分页加载） 使用 x5WebView 做阅览页 日报首页的头部可以循环滚动（使用了 rxjava 轮循和 recyclerviewpager）",
+                hot: false,
+                original: true,
+                type: "article",
+                latestCommentAt: {
+                    __type: "Date",
+                    iso: "2016-12-02T00:17:02.552Z"
+                },
+                title: "MVP 开发框架-开发最快的框架",
+                english: false,
+                rankIndex: 2.538465233489944,
+                url: "https://gold.xitu.io/entry/583d7e19a22b9d006c1e82e7/view",
+                entryView: {
+                    __type: "Pointer",
+                    className: "EntryView",
+                    objectId: "583e394061ff4b006cdf22cd"
+                },
+                gfw: false,
+                commentsCount: 1,
+                user: {
+                    username: "hpw123",
+                    avatar_large: "https://dn-mhke0kuv.qbox.me/DYG8r4R9nMUKLfj279JGyOXu7OxASeMdnZKouM7Y",
+                    avatar_hd: "https://dn-mhke0kuv.qbox.me/DYG8r4R9nMUKLfj279JGyOXu7OxASeMdnZKouM7Y",
+                    objectId: "578a3479128fe10063a31506",
+                    role: "editor",
+                    company: "",
+                    jobTitle: "android开发",
+                    self_description: "喜欢开发",
+                    blogAddress: "https://github.com/SuperMan42/MVP",
+                    totalHotIndex: 4211,
+                    postedEntriesCount: 1,
+                    collectedEntriesCount: 17,
+                    totalCollectionsCount: 254,
+                    subscribedTagsCount: 70,
+                    followeesCount: 1,
+                    followersCount: 6,
+                    isAuthor: false,
+                    postedPostsCount: 0
+                },
+                subscribersCount: 1,
+                screenshot: {
+                    __type: "File",
+                    id: "583e1634128fe1006bf63e7e",
+                    name: "20150309135723885.png",
+                    url: "https://dn-mhke0kuv.qbox.me/efe8f1cd23d0b6346ca0.png"
+                },
+                originalUrl: "http://www.jianshu.com/p/d98013e0cd03",
+                objectId: "583d7e19a22b9d006c1e82e7",
+                createdAt: "2016-11-29T13:09:45.915Z",
+                updatedAt: "2016-12-02T00:38:31.102Z",
+                createdAtString: "2016-11-29T13:09:45.915Z",
+                updatedAtString: "2016-12-02T00:38:31.102Z"
+            },
+            {
+                tagsTitleArray: [
+                    "Material Design"
+                ],
+                category: "android",
+                tags: {
+                    __type: "Relation",
+                    className: "Tag"
+                },
+                hotIndex: 3414,
+                viewsCount: 1262,
+                subscribers: {
+                    __type: "Relation",
+                    className: "_User"
+                },
+                collectionCount: 214,
+                content: "本篇文章会从官方文档出发，介绍 AppBarLayout 的正确使用姿势，争取把 AppBarLayout 彻底讲明白。",
+                hot: false,
+                original: false,
+                type: "article",
+                latestCommentAt: {
+                    __type: "Date",
+                    iso: "2016-11-30T02:51:29.612Z"
+                },
+                title: "玩转 AppBarLayout",
+                english: false,
+                rankIndex: 2.0159003168131826,
+                url: "https://gold.xitu.io/entry/583d74fe128fe1006bf3bc41/view",
+                entryView: {
+                    __type: "Pointer",
+                    className: "EntryView",
+                    objectId: "583e3e7a61ff4b007edecf5d"
+                },
+                gfw: false,
+                commentsCount: 2,
+                user: {
+                    username: "Absfree",
+                    avatar_large: "https://user-gold-cdn.xitu.io/2016/11/29/1b88ec4b18f8b82eb8ba549b00e4d0a6",
+                    avatar_hd: "https://user-gold-cdn.xitu.io/2016/11/29/1b88ec4b18f8b82eb8ba549b00e4d0a6",
+                    objectId: "567503f400b0acaa4bf8cd50",
+                    role: "editor",
+                    company: "零用钱",
+                    jobTitle: "Coder",
+                    self_description: "Java, Android, Linux, Deep Learning",
+                    blogAddress: "http://www.jianshu.com/users/640ce09fd6ec/latest_articles",
+                    totalHotIndex: 83659,
+                    postedEntriesCount: 35,
+                    collectedEntriesCount: 63,
+                    totalCollectionsCount: 4471,
+                    subscribedTagsCount: 21,
+                    followeesCount: 0,
+                    followersCount: 163,
+                    isAuthor: true,
+                    postedPostsCount: 0
+                },
+                subscribersCount: 2,
+                screenshot: {
+                    __type: "File",
+                    id: "583d74f6ac502e006c30d330",
+                    name: "app_bar.jpg",
+                    url: "https://dn-mhke0kuv.qbox.me/d9b747980d0385a2afe9.jpg"
+                },
+                originalUrl: "http://mp.weixin.qq.com/s?__biz=MzIzMjE1Njg4Mw==&mid=2650117784&idx=1&sn=e7590d60c1ad211665d28b9e8ac82254&chksm=f0980d24c7ef8432bf0f37abbb090762124e40f17fa7b7d3c94307996da426f619e29afd8935#rd",
+                objectId: "583d74fe128fe1006bf3bc41",
+                createdAt: "2016-11-29T12:30:54.949Z",
+                updatedAt: "2016-12-02T00:42:10.465Z",
+                createdAtString: "2016-11-29T12:30:54.949Z",
+                updatedAtString: "2016-12-02T00:42:10.465Z"
+            },
+            {
+                tagsTitleArray: [
+                    "Android"
+                ],
+                category: "android",
+                tags: {
+                    __type: "Relation",
+                    className: "Tag"
+                },
+                hotIndex: 3004,
+                viewsCount: 1152,
+                subscribers: {
+                    __type: "Relation",
+                    className: "_User"
+                },
+                collectionCount: 183,
+                content: "高仿百度外卖个人中心，自定义水波纹浪啊浪的界面效果",
+                hot: false,
+                original: true,
+                type: "article",
+                latestCommentAt: {
+                    __type: "Date",
+                    iso: "2016-12-01T16:29:23.272Z"
+                },
+                title: "高仿百度外卖个人中心，让你的界面和我一起浪起来~",
+                english: false,
+                rankIndex: 12.845029442815065,
+                userSubmit: true,
+                url: "https://gold.xitu.io/entry/583fbc5cac502e006cbadc6a/view",
+                entryView: {
+                    __type: "Pointer",
+                    className: "EntryView",
+                    objectId: "583fc725a22b9d007a8283ba"
+                },
+                gfw: false,
+                commentsCount: 4,
+                user: {
+                    username: "苦心孤诣",
+                    avatar_large: "https://user-gold-cdn.xitu.io/2016/11/29/132d109f07ec3c8d36d0080013a1ec22",
+                    avatar_hd: "https://user-gold-cdn.xitu.io/2016/11/29/132d109f07ec3c8d36d0080013a1ec22",
+                    objectId: "57709a977db2a200540323b8",
+                    role: "guest",
+                    totalHotIndex: 4078,
+                    postedEntriesCount: 2,
+                    collectedEntriesCount: 725,
+                    totalCollectionsCount: 249,
+                    subscribedTagsCount: 17,
+                    followeesCount: 5,
+                    followersCount: 7,
+                    isAuthor: false,
+                    postedPostsCount: 0
+                },
+                subscribersCount: 5,
+                screenshot: {
+                    __type: "File",
+                    id: "583fa20479bc440065a2cc3f",
+                    name: "wave.png",
+                    url: "https://dn-mhke0kuv.qbox.me/ba1dec2b6fad8b4f94ab.png"
+                },
+                originalUrl: "http://blog.csdn.net/u011507982/article/details/53414422",
+                objectId: "583fbc5cac502e006cbadc6a",
+                createdAt: "2016-12-01T05:59:56.533Z",
+                updatedAt: "2016-12-02T00:42:03.590Z",
+                createdAtString: "2016-12-01T05:59:56.533Z",
+                updatedAtString: "2016-12-02T00:42:03.590Z"
+            },
+            {
+                tagsTitleArray: [
+                    "Github",
+                    "开源",
+                    "机器学习"
+                ],
+                category: "product",
+                tags: {
+                    __type: "Relation",
+                    className: "Tag"
+                },
+                hotIndex: 2787,
+                viewsCount: 1230,
+                subscribers: {
+                    __type: "Relation",
+                    className: "_User"
+                },
+                collectionCount: 155,
+                content: "GitHub 上 57 款最流行的开源深度学习项目 本文整理了 GitHub 上最流行的 57 款深度学习项目（按 stars 排名）。",
+                hot: false,
+                original: false,
+                type: "article",
+                latestCommentAt: {
+                    __type: "Date",
+                    iso: "2016-12-01T16:21:12.685Z"
+                },
+                title: "GitHub 上 57 款最流行的开源深度学习项目",
+                english: false,
+                rankIndex: 17.69636241627848,
+                url: "https://gold.xitu.io/entry/583ff5b00ce46300576427d2/view",
+                entryView: {
+                    __type: "Pointer",
+                    className: "EntryView",
+                    objectId: "583ff997128fe1006c36807e"
+                },
+                gfw: false,
+                commentsCount: 1,
+                user: {
+                    username: "Sandy",
+                    avatar_large: "https://dn-mhke0kuv.qbox.me/7024fb24ccdc5bc2651e.jpg?imageView/1/w/100/h/100/q/80/format/png",
+                    avatar_hd: "https://dn-mhke0kuv.qbox.me/7024fb24ccdc5bc2651e.jpg?imageView/1/w/100/h/100/q/80/format/png",
+                    objectId: "562ecd5200b09f85c0079a8e",
+                    role: "editor",
+                    company: "游戏开发",
+                    jobTitle: "高级工程师",
+                    self_description: "PHP是一种易于学习和使用的服务器端脚本语言",
+                    blogAddress: "http://weibo.com/518805676",
+                    totalHotIndex: 191731,
+                    postedEntriesCount: 61,
+                    collectedEntriesCount: 65,
+                    totalCollectionsCount: 7523,
+                    subscribedTagsCount: 36,
+                    followeesCount: 0,
+                    followersCount: 291,
+                    isAuthor: true,
+                    postedPostsCount: 0
+                },
+                subscribersCount: 1,
+                screenshot: {
+                    __type: "File",
+                    id: "583ff5b00ce46300576427cf",
+                    name: "1.jpg",
+                    url: "https://dn-mhke0kuv.qbox.me/26f586da255217516a69.jpg"
+                },
+                originalUrl: "https://www.oschina.net/news/79500/57-most-popular-deep-learning-project-at-github",
+                objectId: "583ff5b00ce46300576427d2",
+                createdAt: "2016-12-01T10:04:32.863Z",
+                updatedAt: "2016-12-02T00:41:41.937Z",
+                createdAtString: "2016-12-01T10:04:32.863Z",
+                updatedAtString: "2016-12-02T00:41:41.937Z"
+            },
+            {
+                tagsTitleArray: [
+                    "Android"
+                ],
+                category: "android",
+                tags: {
+                    __type: "Relation",
+                    className: "Tag"
+                },
+                hotIndex: 2674,
+                viewsCount: 1167,
+                subscribers: {
+                    __type: "Relation",
+                    className: "_User"
+                },
+                collectionCount: 148,
+                content: "前言 现在越来越多的应用开始有上传大文件的需求，以及秒传，续传功能。由于最近学习大文件分隔上传，以及秒传的实现，给予分享的这种精神，我想将自己的学习过程，以及遇到的问题做一个总结，希望对有这方面需求的小伙伴有一定的帮助。 源码传送门[不小心点进去了给个star( ^_^ )] …",
+                hot: false,
+                original: true,
+                type: "post",
+                latestCommentAt: {
+                    __type: "Date",
+                    iso: "2016-12-01T04:45:00.657Z"
+                },
+                title: "Android大文件上传秒传之MD5篇",
+                english: false,
+                rankIndex: 2.3579750175577687,
+                url: "https://gold.xitu.io/entry/583e2289128fe1006ac9f07d/view",
+                entryView: {
+                    __type: "Pointer",
+                    className: "EntryView",
+                    objectId: "583e22890ce463006bb1a41d"
+                },
+                gfw: false,
+                commentsCount: 5,
+                user: {
+                    username: "Code4Android",
+                    avatar_large: "https://user-gold-cdn.xitu.io/2016/11/29/782ed2c1481d430fc8435c911095039d",
+                    avatar_hd: "https://user-gold-cdn.xitu.io/2016/11/29/782ed2c1481d430fc8435c911095039d",
+                    objectId: "57b16c0e128fe10055c60d0e",
+                    role: "editor",
+                    totalHotIndex: 28321,
+                    postedEntriesCount: 6,
+                    collectedEntriesCount: 5,
+                    totalCollectionsCount: 1216,
+                    subscribedTagsCount: 15,
+                    followeesCount: 18,
+                    followersCount: 50,
+                    isAuthor: true,
+                    postedPostsCount: 1
+                },
+                subscribersCount: 4,
+                screenshot: {
+                    __type: "File",
+                    id: "583e259dc59e0d006b4d9162",
+                    name: "QQ截图20161130090357.png",
+                    url: "https://dn-mhke0kuv.qbox.me/9c6e71fcfb4e6390f6ab.png"
+                },
+                originalUrl: "http://gold.xitu.io/post/583e2172128fe1006bf66bc8",
+                objectId: "583e2289128fe1006ac9f07d",
+                createdAt: "2016-11-30T00:51:21.138Z",
+                updatedAt: "2016-12-02T00:37:14.386Z",
+                createdAtString: "2016-11-30T00:51:21.138Z",
+                updatedAtString: "2016-12-02T00:37:14.386Z"
+            },
+            {
+                tagsTitleArray: [
+                    "面试",
+                    "程序员"
+                ],
+                category: "android",
+                tags: {
+                    __type: "Relation",
+                    className: "Tag"
+                },
+                hotIndex: 2560,
+                viewsCount: 1398,
+                subscribers: {
+                    __type: "Relation",
+                    className: "_User"
+                },
+                collectionCount: 114,
+                content: "希望对正在找工作的人有点帮助。",
+                hot: false,
+                original: true,
+                type: "article",
+                latestCommentAt: {
+                    __type: "Date",
+                    iso: "2016-11-30T01:46:06.223Z"
+                },
+                title: "如何提升你的面试机会？",
+                english: false,
+                rankIndex: 1.1775387128436539,
+                url: "https://gold.xitu.io/entry/583cf2aa61ff4b006b5d1c08/view",
+                entryView: {
+                    __type: "Pointer",
+                    className: "EntryView",
+                    objectId: "583d0eb4a22b9d006a916eb4"
+                },
+                gfw: false,
+                commentsCount: 4,
+                user: {
+                    username: "stormzhangV",
+                    avatar_large: "https://user-gold-cdn.xitu.io/2016/11/29/1fcfc04da8adab17749d8acb1c280339",
+                    avatar_hd: "https://user-gold-cdn.xitu.io/2016/11/29/1fcfc04da8adab17749d8acb1c280339",
+                    objectId: "55fe1c23ddb263b5605b2c03",
+                    role: "editor",
+                    company: "Boohee, Inc.",
+                    jobTitle: "Android Leader",
+                    self_description: "微信公众号: AndroidDeveloper「googdev」 | 个人博客: http://stormzhang.com",
+                    blogAddress: "http://stormzhang.com",
+                    totalHotIndex: 336739,
+                    postedEntriesCount: 58,
+                    collectedEntriesCount: 34,
+                    totalCollectionsCount: 12621,
+                    subscribedTagsCount: 12,
+                    followeesCount: 3,
+                    followersCount: 10325,
+                    isAuthor: true,
+                    postedPostsCount: 5
+                },
+                subscribersCount: 3,
+                screenshot: {
+                    __type: "File",
+                    id: "583cf2a9ac502e006c2d429f",
+                    name: "IMG_2104.JPG",
+                    url: "https://dn-mhke0kuv.qbox.me/effebd89cef8040fbdc3.JPG"
+                },
+                originalUrl: "http://stormzhang.com/2016/11/28/improve-your-interview-chance/",
+                objectId: "583cf2aa61ff4b006b5d1c08",
+                createdAt: "2016-11-29T03:14:50.264Z",
+                updatedAt: "2016-12-02T00:41:14.520Z",
+                createdAtString: "2016-11-29T03:14:50.264Z",
+                updatedAtString: "2016-12-02T00:41:14.520Z"
+            },
+            {
+                tagsTitleArray: [
+                    "Android"
+                ],
+                category: "android",
+                tags: {
+                    __type: "Relation",
+                    className: "Tag"
+                },
+                hotIndex: 2289,
+                viewsCount: 787,
+                subscribers: {
+                    __type: "Relation",
+                    className: "_User"
+                },
+                collectionCount: 150,
+                content: "该视频播放器基于 Bilibili 的开源项目 ijkplayer 做的，集成沉浸式全屏、弹幕、触屏控制、视频源切换、三指旋转缩放、视频宽高比例设置、记录跳转、截屏等功能",
+                hot: false,
+                original: true,
+                type: "article",
+                title: "基于 ijkplayer 的视频播放器，仿 Bilibili 客户端，集成沉浸式全屏、弹幕、触屏控制、视频源切换等功能",
+                english: false,
+                rankIndex: 1.1748986493661693,
+                userSubmit: true,
+                url: "https://gold.xitu.io/entry/583d2d8ca22b9d006a9241f8/view",
+                entryView: {
+                    __type: "Pointer",
+                    className: "EntryView",
+                    objectId: "583d36c6c59e0d006b492281"
+                },
+                gfw: false,
+                commentsCount: 0,
+                user: {
+                    username: "Rukey7",
+                    avatar_large: "https://avatars.githubusercontent.com/u/13436901?v=3",
+                    avatar_hd: "https://avatars.githubusercontent.com/u/13436901?v=3",
+                    objectId: "57a42fa60a2b58005841f8c0",
+                    role: "guest",
+                    totalHotIndex: 18208,
+                    postedEntriesCount: 11,
+                    collectedEntriesCount: 0,
+                    totalCollectionsCount: 1013,
+                    subscribedTagsCount: 10,
+                    followeesCount: 5,
+                    followersCount: 18,
+                    isAuthor: false,
+                    postedPostsCount: 0
+                },
+                subscribersCount: 0,
+                screenshot: {
+                    __type: "File",
+                    id: "583d1a94ac502e006eaf7ca8",
+                    name: "horizontal.png",
+                    url: "https://dn-mhke0kuv.qbox.me/39a6cb8896dc58a07a86.png"
+                },
+                originalUrl: "http://blog.csdn.net/github_35180164/article/details/53376923",
+                objectId: "583d2d8ca22b9d006a9241f8",
+                createdAt: "2016-11-29T07:26:04.465Z",
+                updatedAt: "2016-12-02T00:39:03.601Z",
+                createdAtString: "2016-11-29T07:26:04.465Z",
+                updatedAtString: "2016-12-02T00:39:03.601Z"
+            },
+            {
+                tagsTitleArray: [
+                    "Android",
+                    "蓝牙"
+                ],
+                category: "android",
+                tags: {
+                    __type: "Relation",
+                    className: "Tag"
+                },
+                hotIndex: 2265,
+                viewsCount: 773,
+                subscribers: {
+                    __type: "Relation",
+                    className: "_User"
+                },
+                collectionCount: 149,
+                content: "关于蓝牙的好文章不多见，这是作者在 Droidcon Beijing 2016 和 GDG Devfest 2016 上做的分享，值得看看哦。",
+                hot: false,
+                original: false,
+                type: "article",
+                title: "Android 上的蓝牙实践",
+                english: false,
+                rankIndex: 1.416453927633687,
+                url: "https://gold.xitu.io/entry/583d9054c59e0d006b4bb039/view",
+                entryView: {
+                    __type: "Pointer",
+                    className: "EntryView",
+                    objectId: "583e46b261ff4b006cdfd980"
+                },
+                gfw: false,
+                commentsCount: 0,
+                user: {
+                    username: "D_clock爱吃葱花",
+                    avatar_large: "https://user-gold-cdn.xitu.io/2016/11/29/33f80818dec813715c49a26ba4c6ee44",
+                    avatar_hd: "https://user-gold-cdn.xitu.io/2016/11/29/33f80818dec813715c49a26ba4c6ee44",
+                    objectId: "5647657960b27f7a01ba5122",
+                    role: "editor",
+                    company: "YY",
+                    jobTitle: "Android开发攻城狮",
+                    self_description: "Diycode大管家，闭关写代码",
+                    blogAddress: "http://www.jianshu.com/users/ec95b5891948/latest_articles",
+                    totalHotIndex: 193346,
+                    postedEntriesCount: 42,
+                    collectedEntriesCount: 7,
+                    totalCollectionsCount: 8113,
+                    subscribedTagsCount: 44,
+                    followeesCount: 19,
+                    followersCount: 334,
+                    isAuthor: true,
+                    postedPostsCount: 1
+                },
+                subscribersCount: 0,
+                screenshot: {
+                    __type: "File",
+                    id: "583d905361ff4b007edc65ab",
+                    name: "unnamed.png",
+                    url: "https://dn-mhke0kuv.qbox.me/ba89c3ab579b0967d081.png"
+                },
+                originalUrl: "http://www.race604.com/android-ble-in-action/",
+                objectId: "583d9054c59e0d006b4bb039",
+                createdAt: "2016-11-29T14:27:32.619Z",
+                updatedAt: "2016-12-02T00:41:23.659Z",
+                createdAtString: "2016-11-29T14:27:32.619Z",
+                updatedAtString: "2016-12-02T00:41:23.659Z"
+            },
+            {
+                tagsTitleArray: [
+                    "Github"
+                ],
+                category: "freebie",
+                tags: {
+                    __type: "Relation",
+                    className: "Tag"
+                },
+                hotIndex: 2076,
+                viewsCount: 894,
+                subscribers: {
+                    __type: "Relation",
+                    className: "_User"
+                },
+                collectionCount: 116,
+                content: "兴趣是最好的老师，《HelloGitHub》就是帮你找到兴趣！",
+                hot: false,
+                original: false,
+                type: "article",
+                latestCommentAt: {
+                    __type: "Date",
+                    iso: "2016-12-01T03:49:28.722Z"
+                },
+                title: "《HelloGitHub》第 08 期",
+                english: false,
+                rankIndex: 1.3759469348743025,
+                url: "https://gold.xitu.io/entry/583daab4ac502e006c2ca63b/view",
+                entryView: {
+                    __type: "Pointer",
+                    className: "EntryView",
+                    objectId: "583e42e567f356006bbd3523"
+                },
+                gfw: false,
+                commentsCount: 4,
+                user: {
+                    username: "削微寒",
+                    avatar_large: "https://user-gold-cdn.xitu.io/2016/11/29/813450f818f9183d78bf96441cc113dd",
+                    avatar_hd: "https://user-gold-cdn.xitu.io/2016/11/29/813450f818f9183d78bf96441cc113dd",
+                    objectId: "5677785f60b2298f122fe889",
+                    role: "editor",
+                    company: "Pythoner",
+                    jobTitle: "后端工程师",
+                    self_description: "Fighting!!!!",
+                    blogAddress: "http://www.cnblogs.com/xueweihan/",
+                    totalHotIndex: 31617,
+                    postedEntriesCount: 10,
+                    collectedEntriesCount: 93,
+                    totalCollectionsCount: 1208,
+                    subscribedTagsCount: 23,
+                    followeesCount: 3,
+                    followersCount: 144,
+                    isAuthor: true,
+                    postedPostsCount: 0
+                },
+                subscribersCount: 4,
+                screenshot: {
+                    __type: "File",
+                    id: "583daabb61ff4b006cd922ad",
+                    name: "github第三版.jpg",
+                    url: "https://dn-mhke0kuv.qbox.me/bed427efff698ee6429c.jpg"
+                },
+                originalUrl: "https://github.com/521xueweihan/HelloGitHub/blob/master/08/HelloGitHub08.md",
+                objectId: "583daab4ac502e006c2ca63b",
+                createdAt: "2016-11-29T16:20:04.482Z",
+                updatedAt: "2016-12-02T00:39:01.719Z",
+                createdAtString: "2016-11-29T16:20:04.482Z",
+                updatedAtString: "2016-12-02T00:39:01.719Z"
+            },
+            {
+                tagsTitleArray: [
+                    "Android"
+                ],
+                category: "android",
+                tags: {
+                    __type: "Relation",
+                    className: "Tag"
+                },
+                hotIndex: 1806,
+                viewsCount: 769,
+                subscribers: {
+                    __type: "Relation",
+                    className: "_User"
+                },
+                collectionCount: 102,
+                content: "一个方法能搞定的事, 为什么要去改 xml 呢? 基于张鸿洋的 LoadingAndRetryManager 改写而来的, 封装了常用逻辑, 优化了相关 api.",
+                hot: false,
+                original: false,
+                type: "article",
+                latestCommentAt: {
+                    __type: "Date",
+                    iso: "2016-12-01T00:13:11.204Z"
+                },
+                title: "看这个页面状态管理类! 我实在看不下去你们直接用 Layout",
+                english: false,
+                rankIndex: 0.9298980233442105,
+                userSubmit: true,
+                url: "https://gold.xitu.io/entry/583d2f3ca22b9d006a924fc4/view",
+                entryView: {
+                    __type: "Pointer",
+                    className: "EntryView",
+                    objectId: "583d329cc59e0d006b49047f"
+                },
+                gfw: false,
+                commentsCount: 3,
+                user: {
+                    username: "水牛",
+                    avatar_large: "https://user-gold-cdn.xitu.io/2016/11/29/46edcb8ef751a08de1768a2856e7373f",
+                    avatar_hd: "https://user-gold-cdn.xitu.io/2016/11/29/46edcb8ef751a08de1768a2856e7373f",
+                    objectId: "57b67ee08ac2470062cf7647",
+                    role: "editor",
+                    company: "东方心智",
+                    jobTitle: "安卓开发",
+                    totalHotIndex: 4963,
+                    postedEntriesCount: 4,
+                    collectedEntriesCount: 61,
+                    totalCollectionsCount: 263,
+                    subscribedTagsCount: 34,
+                    followeesCount: 1,
+                    followersCount: 9,
+                    isAuthor: true,
+                    postedPostsCount: 1
+                },
+                subscribersCount: 3,
+                screenshot: {
+                    __type: "File",
+                    id: "583ce06161ff4b006ccdf6b5",
+                    name: "lunar_space_galaxy-1920x1080.jpg",
+                    url: "https://dn-mhke0kuv.qbox.me/c7e9922ec6d3a8f90cab.jpg"
+                },
+                originalUrl: "http://www.jianshu.com/p/665a69e9436b",
+                objectId: "583d2f3ca22b9d006a924fc4",
+                createdAt: "2016-11-29T07:33:16.680Z",
+                updatedAt: "2016-12-02T00:38:58.602Z",
+                createdAtString: "2016-11-29T07:33:16.680Z",
+                updatedAtString: "2016-12-02T00:38:58.602Z"
+            },
+            {
+                tagsTitleArray: [
+                    "Android"
+                ],
+                category: "android",
+                tags: {
+                    __type: "Relation",
+                    className: "Tag"
+                },
+                hotIndex: 1756,
+                viewsCount: 584,
+                subscribers: {
+                    __type: "Relation",
+                    className: "_User"
+                },
+                collectionCount: 117,
+                content: "全方面了解通知",
+                hot: false,
+                original: false,
+                type: "article",
+                title: "安卓 Notification，希望一篇就够",
+                english: false,
+                rankIndex: 0.9378850147906107,
+                userSubmit: true,
+                url: "https://gold.xitu.io/entry/583d425ea22b9d006a92df93/view",
+                entryView: {
+                    __type: "Pointer",
+                    className: "EntryView",
+                    objectId: "583d435d0ce463006bada1ac"
+                },
+                gfw: false,
+                commentsCount: 0,
+                user: {
+                    username: "挨踢人One",
+                    objectId: "575ad6c7df0eea00647557b8",
+                    role: "guest",
+                    totalHotIndex: 4994,
+                    postedEntriesCount: 3,
+                    collectedEntriesCount: 6,
+                    totalCollectionsCount: 269,
+                    subscribedTagsCount: 23,
+                    followeesCount: 2,
+                    followersCount: 1,
+                    isAuthor: false,
+                    postedPostsCount: 0
+                },
+                subscribersCount: 0,
+                originalUrl: "http://www.jianshu.com/p/7ca3451bf718",
+                objectId: "583d425ea22b9d006a92df93",
+                createdAt: "2016-11-29T08:54:54.775Z",
+                updatedAt: "2016-12-02T00:39:29.136Z",
+                createdAtString: "2016-11-29T08:54:54.775Z",
+                updatedAtString: "2016-12-02T00:39:29.136Z"
+            },
+            {
+                tagsTitleArray: [
+                    "设计",
+                    "面试",
+                    "程序员",
+                    "Photoshop",
+                    "图片资源",
+                    "工具资源",
+                    "前端"
+                ],
+                category: "design",
+                tags: {
+                    __type: "Relation",
+                    className: "Tag"
+                },
+                hotIndex: 1740,
+                viewsCount: 688,
+                subscribers: {
+                    __type: "Relation",
+                    className: "_User"
+                },
+                collectionCount: 105,
+                content: "简历在求职中必不可少，本次分享的简历简介精致，而且样式多种多样。包含 INDD、IDML、PDF、PSD、DOCX 等格式，方便自由修改和学习。",
+                hot: false,
+                original: false,
+                type: "article",
+                title: "30+ 专业精简的个人简历模版打包下载",
+                english: false,
+                rankIndex: 0.7617127129519313,
+                url: "https://gold.xitu.io/entry/583cd4e761ff4b006ccd6080/view",
+                entryView: {
+                    __type: "Pointer",
+                    className: "EntryView",
+                    objectId: "583ce6d3c59e0d006b470f4f"
+                },
+                gfw: false,
+                commentsCount: 0,
+                user: {
+                    username: "稀土区",
+                    avatar_large: "https://user-gold-cdn.xitu.io/2016/11/29/aa421e908fcc148554eded21b6f08b68.jpg",
+                    avatar_hd: "https://user-gold-cdn.xitu.io/2016/11/29/aa421e908fcc148554eded21b6f08b68.jpg",
+                    objectId: "5718f5885bbb500057d35104",
+                    role: "editor",
+                    company: "稀土区",
+                    jobTitle: "某酱",
+                    self_description: "优质设计开发资源分享，微信号：[xituqu]",
+                    blogAddress: "https://xituqu.com",
+                    totalHotIndex: 381638,
+                    postedEntriesCount: 97,
+                    collectedEntriesCount: 100,
+                    totalCollectionsCount: 17202,
+                    subscribedTagsCount: 4,
+                    followeesCount: 3,
+                    followersCount: 1474,
+                    isAuthor: false,
+                    postedPostsCount: 0
+                },
+                subscribersCount: 0,
+                screenshot: {
+                    __type: "File",
+                    id: "583cd4e5a22b9d006dd313ce",
+                    name: "65e4f1e6jw1f81nu4a1brj20w80lgq8s.jpg",
+                    url: "https://dn-mhke0kuv.qbox.me/110f47e6d2124bf36e93.jpg"
+                },
+                originalUrl: "https://www.xituqu.com/505.html",
+                objectId: "583cd4e761ff4b006ccd6080",
+                createdAt: "2016-11-29T01:07:51.427Z",
+                updatedAt: "2016-12-02T00:33:17.810Z",
+                createdAtString: "2016-11-29T01:07:51.427Z",
+                updatedAtString: "2016-12-02T00:33:17.810Z"
+            },
+            {
+                tagsTitleArray: [
+                    "Android"
+                ],
+                category: "android",
+                tags: {
+                    __type: "Relation",
+                    className: "Tag"
+                },
+                hotIndex: 1735,
+                viewsCount: 693,
+                subscribers: {
+                    __type: "Relation",
+                    className: "_User"
+                },
+                collectionCount: 104,
+                content: "Android UI 框架快速搭建实践",
+                hot: false,
+                original: true,
+                type: "article",
+                title: "Android UI 框架快速搭建实践",
+                english: false,
+                rankIndex: 2.113652830263437,
+                userSubmit: true,
+                url: "https://gold.xitu.io/entry/583e966561ff4b006b66285d/view",
+                entryView: {
+                    __type: "Pointer",
+                    className: "EntryView",
+                    objectId: "583e9ca30ce463006bb49ba5"
+                },
+                gfw: false,
+                commentsCount: 0,
+                user: {
+                    username: "困境中的扳道工",
+                    avatar_large: "https://dn-mhke0kuv.qbox.me/33908546a0833066d179.jpg?imageView/2/w/100/h/100/q/80/format/png",
+                    avatar_hd: "https://dn-mhke0kuv.qbox.me/33908546a0833066d179.jpg?imageView/2/w/100/h/100/q/80/format/png",
+                    objectId: "583b9c8067f356006baf11b8",
+                    role: "editor",
+                    jobTitle: "Android工程师",
+                    self_description: "立志成为全栈的android coder",
+                    totalHotIndex: 2694,
+                    postedEntriesCount: 3,
+                    collectedEntriesCount: 0,
+                    totalCollectionsCount: 157,
+                    subscribedTagsCount: 26,
+                    followeesCount: 0,
+                    followersCount: 5,
+                    isAuthor: true,
+                    postedPostsCount: 0
+                },
+                subscribersCount: 0,
+                originalUrl: "http://www.jianshu.com/p/d727963e90b8",
+                objectId: "583e966561ff4b006b66285d",
+                createdAt: "2016-11-30T09:05:41.000Z",
+                updatedAt: "2016-12-02T00:40:33.515Z",
+                createdAtString: "2016-11-30T09:05:41.000Z",
+                updatedAtString: "2016-12-02T00:40:33.515Z"
+            }
+        ]
+    }
+}

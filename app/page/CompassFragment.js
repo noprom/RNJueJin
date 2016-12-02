@@ -6,6 +6,7 @@ import theme from '../config/theme';
 import SearchBar from '../component/SearchBar';
 import Swiper from 'react-native-swiper';
 import ImageButton from '../component/ImageButtonWithText';
+import ListView from '../component/ListViewForCompass';
 
 const bannerImages = [
   require('../image/banner1.jpg'),
@@ -85,6 +86,7 @@ export default class CompassFragment extends Component {
               )
             })}
           </View>
+          <ListView />
         </ScrollView>
       </View>
     );
