@@ -14,6 +14,7 @@ import ReactNative, {
 } from 'react-native';
 import px2dp from '../util/px2dp';
 import theme from '../config/theme';
+import MainPage from '../page/MainPage';
 
 export default class ListViewForCompass extends Component {
 
@@ -61,7 +62,7 @@ export default class ListViewForCompass extends Component {
   }
 
   _itemClickCallback() {
-
+    MainPage.switchPage();
   }
 
   _renderItem(rowData, sectionID, rowID, highlightRow) {
