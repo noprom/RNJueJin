@@ -50,7 +50,10 @@ export default class ListViewForCompass extends Component {
             this.setState({
                 dataSource: this.state.dataSource.cloneWithRows(dataBlob)
             });
-    }).done();
+    })
+    .catch(error => {
+        console.log('request fail');
+      }).done();
   }
 
   _computeTime(time) {
