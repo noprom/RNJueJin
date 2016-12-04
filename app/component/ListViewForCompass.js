@@ -62,7 +62,7 @@ export default class ListViewForCompass extends Component {
 
   _itemClickCallback(url, userInfo) {
     //MainPage.switchPage();
-    MainPage.switchWebViewPage(url, userInfo);
+    MainPage.switchToWebViewPage(url, userInfo);
   }
 
   _renderItem(rowData, sectionID, rowID, highlightRow) {

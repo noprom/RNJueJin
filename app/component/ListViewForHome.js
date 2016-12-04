@@ -21,7 +21,11 @@ export default class ListViewForHome extends Component {
     }
 
     _itemClickCallback(url, userInfo) {
-      MainPage.switchWebViewPage(url, userInfo);
+      MainPage.switchToWebViewPage(url, userInfo);
+    }
+
+    _userNameClickCallback(userInfo) {
+      MainPage.switchToIndividualPage(userInfo);
     }
 
     _getList() {
@@ -64,11 +68,16 @@ export default class ListViewForHome extends Component {
                     </View>
                     <View style={{flex: 85}}>
                         <View style={{flexDirection:'row', justifyContent:'space-between'}}>
-                            <TextButton text={rowData.user.username} color='steelblue' fontSize={px2dp(14)}/>
+                            <TextButton
+                                onPress={this._userNameClickCallback.bind(this, rowData.user)}
+                                text={rowData.user.username}
+                                color='steelblue'
+                                fontSize={px2dp(14)}
+                            />
                             <Text style={{fontSize: px2dp(12), color: theme.grayColor}}>{rowData.tags[0]}</Text>
                         </View>
-                        <View style={{marginTop:3}}>
-                            <Text style={{fontSize: 11, color: theme.grayColor}} numberOfLines={1}>{rowData.user.jobTitle} @ {rowData.user.company} • {rowData.time}</Text>
+                        <View style={{marginTop: px2dp(3)}}>
+                            <Text style={{fontSize: px2dp(11), color: theme.grayColor}} numberOfLines={1}>{rowData.user.jobTitle} @ {rowData.user.company} • {rowData.time}</Text>
                         </View>
                     </View>
                 </View>
@@ -124,10 +133,10 @@ const styles = StyleSheet.create({
     items: {
         backgroundColor: '#fff',
         borderTopWidth: 1 / PixelRatio.get(),
-        borderBottomWidth: 2 / PixelRatio.get(),
+        borderBottomWidth: 1 / PixelRatio.get(),
         borderBottomColor: '#c4c4c4',
         borderTopColor: '#e4e4e4',
-        marginBottom: 7
+        marginBottom: px2dp(7)
     },
     userBar: {
         padding: px2dp(10),
@@ -148,14 +157,14 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         height: px2dp(60),
         width: theme.screenWidth - px2dp(20),
-        borderWidth: 2/PixelRatio.get(),
+        borderWidth: 1 / PixelRatio.get(),
         borderColor: theme.grayColor,
         marginLeft: px2dp(10),
         marginRight: px2dp(10)
     },
     linkImage:{
-        width: px2dp(60),
-        height: px2dp(60),
+        width: px2dp(59),
+        height: px2dp(59),
         resizeMode: 'cover'
     },
     linkText: {
