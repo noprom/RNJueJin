@@ -11,7 +11,7 @@ export default class HomeFragment extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      tabNames: ['首页','Android','iOS','前端','后端','产品','设计']
+      tabNames: ['首页', 'Android', 'iOS', '前端', '后端', '产品', '设计']
     }
   }
 
@@ -39,7 +39,6 @@ export default class HomeFragment extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: (Platform.OS === 'ios') ? px2dp(20) : 0,
     backgroundColor: theme.pageBackgroundColor
   },
   text: {

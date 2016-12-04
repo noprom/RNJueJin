@@ -18,17 +18,21 @@ export default class TabBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedTab: 'home'
+      selectedTab: 'home',
+      tabName: ['首页', '发现', '消息', '我']
     }
   }
 
   render() {
     const {selectedColor} = this.props;
+    const {tabName} = this.state;
+
     return (
       <TabNavigator
         tabBarStyle={styles.tabbar}>
         <TabNavigator.Item
              tabStyle={styles.tabStyle}
+             title={tabName[0]}
              selected={this.state.selectedTab === 'home'}
              selectedTitleStyle={{color: selectedColor}}
              renderIcon={() => <Image style={styles.tab} source={this.state.homeNormal} />}
@@ -38,6 +42,7 @@ export default class TabBar extends Component {
         </TabNavigator.Item>
         <TabNavigator.Item
              tabStyle={styles.tabStyle}
+             title={tabName[1]}
              selected={this.state.selectedTab === 'compass'}
              selectedTitleStyle={{color: selectedColor}}
              renderIcon={() => <Image style={styles.tab} source={this.state.compassNormal} />}
@@ -47,6 +52,7 @@ export default class TabBar extends Component {
         </TabNavigator.Item>
         <TabNavigator.Item
              tabStyle={styles.tabStyle}
+             title={tabName[2]}
              selected={this.state.selectedTab === 'notification'}
              selectedTitleStyle={{color: selectedColor}}
              renderIcon={() => <Image style={styles.tab} source={this.state.notificationNormal} />}
@@ -56,6 +62,7 @@ export default class TabBar extends Component {
         </TabNavigator.Item>
         <TabNavigator.Item
              tabStyle={styles.tabStyle}
+             title={tabName[3]}
              selected={this.state.selectedTab === 'me'}
              selectedTitleStyle={{color: selectedColor}}
              renderIcon={() => <Image style={styles.tab} source={this.state.meNormal} />}
@@ -82,7 +89,7 @@ export default class TabBar extends Component {
 
 const styles = StyleSheet.create({
   tabbar: {
-    height: px2dp(49),
+    height: px2dp(65),
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#fff'
