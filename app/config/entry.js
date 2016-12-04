@@ -20,6 +20,6 @@ export default class Navigation extends Component {
   }
 
   componentDidMount() {
-    SplashScreen.hide();
+    // SplashScreen.hide();
   }
 }
