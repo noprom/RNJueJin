@@ -4,8 +4,10 @@ import {Navigator} from 'react-native';
 import MainPage from '../page/MainPage';
 import SignInPage from '../page/SignInAndSignup/SignInPage';
 import WebViewPage from '../page/WebViewPage';
+import SplashScreen from '../native_modules/SplashScreen';
 
 export default class Navigation extends Component {
+
   render() {
     return (
       <Navigator
@@ -15,5 +17,9 @@ export default class Navigation extends Component {
         }}
       />
     );
+  }
+
+  componentDidMount() {
+    SplashScreen.hide();
   }
 }

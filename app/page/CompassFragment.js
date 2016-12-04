@@ -10,8 +10,7 @@ import ListView from '../component/ListViewForCompass';
 
 const bannerImages = [
   require('../image/banner1.jpg'),
-  require('../image/rank.png'),
-  require('../image/hot.png')
+  require('../image/banner2.png')
 ];
 
 const imgBtnImages = [
@@ -64,12 +63,7 @@ export default class CompassFragment extends Component {
                   <Image style={styles.image} source={bannerImages[0]} resizeMode="stretch"/>
               </View>
               <View style={styles.slide}>
-                  {/*<Image style={styles.image} source={BANNER_IMAGES[1]}/>*/}
-                  <View style={{backgroundColor:'yellow', height: px2dp(130)}}></View>
-              </View>
-              <View style={styles.slide}>
-                  {/*<Image style={styles.image} source={BANNER_IMAGES[2]}/>*/}
-                  <View style={{backgroundColor:'green', height: px2dp(130)}}></View>
+                  <Image style={styles.image} source={bannerImages[1]} resizeMode="stretch"/>
               </View>
           </Swiper>
           <View style={styles.imageBtnLine}>
