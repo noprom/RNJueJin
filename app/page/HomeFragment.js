@@ -27,7 +27,7 @@ export default class HomeFragment extends Component {
            tabBarUnderlineStyle={theme.scrollView.underlineStyle}>
            {this.state.tabNames.map((item, i) => {
              return (
-               <HomeTab tabLabel={item} key={i} />
+               <HomeTab tabLabel={item} key={i} tabTag={item}/>
              );
            })}
        </ScrollableTabView>
