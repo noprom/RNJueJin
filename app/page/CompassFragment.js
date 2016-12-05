@@ -14,7 +14,7 @@ const bannerImages = [
 ];
 
 const imgBtnImages = [
-  require('../image/tend.png'),
+  require('../image/trend.png'),
   require('../image/rank.png'),
   require('../image/hot.png')
 ];
@@ -24,7 +24,8 @@ export default class CompassFragment extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      refreshing: false,
+      refreshing: true,
+      dataBlob: [],
       btnName: ['沸点', '贡献榜', '本周最热']
     }
   }
@@ -46,6 +47,47 @@ export default class CompassFragment extends Component {
     );
     setTimeout(() => this.setState({refreshing: false}), 3000);
   }
+
+  _renderListView() {
+       if(!this.state.refreshing)
+           return(
+               <ListView isRenderHeader={true} contents={this.state.dataBlob}/>
+           );
+   }
+
+   _fetchData() {
+       fetch('http://gold.xitu.io/api/v1/hot/57fa525a0e3dd90057c1e04d/android')
+           .then((response) => response.json())
+           .then((responseData) => {
+               let data = responseData.data;
+               let entry = data.entry;
+               var dataBlob = [];
+
+               for(let i in entry) {
+                   let itemInfo = {
+                       title: entry[i].title,
+                       collectionCount: entry[i].collectionCount,
+                       user: entry[i].user,
+                       time: this._computeTime(entry[i].createdAtString),
+                       url: entry[i].url
+                   }
+                   dataBlob.push(itemInfo);
+               }
+
+               this.setState({
+                   dataBlob: dataBlob,
+                   refreshing: false
+               });
+           }).done();
+   }
+
+   _computeTime(time) {
+       return '1天前';
+   }
+
+   componentDidMount() {
+       this._fetchData();
+   }
 
   render() {
     return (
@@ -80,7 +122,7 @@ export default class CompassFragment extends Component {
               )
             })}
           </View>
-          <ListView isRenderHeader={true}/>
+          { this._renderListView() }
         </ScrollView>
       </View>
     );

@@ -32,38 +32,10 @@ export default class SimpleListView extends Component {
       rowHasChanged: (r1, r2) => r1 !== r2
     });
     this.state = {
-      dataSource: ds
+      dataSource: ds.cloneWithRows(this.props.contents)
     }
   }
-
-  _getList() {
-    fetch('http://gold.xitu.io/api/v1/hot/57fa525a0e3dd90057c1e04d/android')
-        .then((response) => response.json())
-        .then((responseData) => {
-            var data = responseData.data;
-            var entry = data.entry;
-            var dataBlob = [];
-
-            for(let i in entry) {
-                let itemInfo = {
-                    title: entry[i].title,
-                    count: entry[i].collectionCount,
-                    author: entry[i].user,
-                    time: this._computeTime(entry[i].createdAtString),
-                    url: entry[i].url
-                }
-                dataBlob.push(itemInfo);
-            }
-
-            this.setState({
-                dataSource: this.state.dataSource.cloneWithRows(dataBlob)
-            });
-    })
-    .catch(error => {
-        console.log('request fail');
-      }).done();
-  }
-
+  
   _computeTime(time) {
     return '1天前';
   }
@@ -77,7 +49,7 @@ export default class SimpleListView extends Component {
     if(Platform.OS === 'ios') {
         return (
             <TouchableOpacity
-                onPress={this._itemClickCallback.bind(this, rowData.url, rowData.author)}
+                onPress={this._itemClickCallback.bind(this, rowData.url, rowData.user)}
                 activeOpacity={theme.btnActiveOpacity}>
                 <View>
                     <View style={{height: 1 / PixelRatio.get(), backgroundColor: '#f1f1f1'}}/>
@@ -88,7 +60,7 @@ export default class SimpleListView extends Component {
                         <View style={{flex: 80, marginTop: px2dp(10)}}>
                             <Text style={styles.content} numberOfLines={2}>{rowData.title}</Text>
                             <View style={styles.infoBar}>
-                                <Text style={styles.infoBarText}>{rowData.count}人收藏 • {rowData.author.username} • {rowData.time}</Text>
+                                <Text style={styles.infoBarText} numberOfLines={1}>{rowData.collectionCount}人收藏 • {rowData.user.username} • {rowData.time}</Text>
                             </View>
                         </View>
                     </View>
@@ -137,10 +109,6 @@ export default class SimpleListView extends Component {
               renderHeader={this._renderHeader.bind(this)}
           />
       );
-  }
-
-  componentDidMount(){
-      this._getList();
   }
 }
 

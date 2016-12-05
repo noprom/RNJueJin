@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import { Text, StyleSheet, View, ScrollView, RefreshControl } from 'react-native';
 import HotPanel from '../../component/HotPanel';
-import ListView from '../../component/ListViewForHome';
+import ListViewForHomeTab from '../../component/ListViewForHome';
 import DataModel from '../../model/DataModel';
 import ListViewForOtherTab from '../../component/SimpleListView';
 
@@ -14,11 +14,6 @@ export default class HomeTab extends Component {
     this.state = {
       refreshing: true,
       dataBlob: [],
-      hotData: [
-          {title: '仅两步实现 拜拜 汉堡导航栏效果～ 全新底部导航交互', star: 235, author: 'android', time: '一周前', url: 'http://www.google.com.au', image:  ''},
-          {title: '双十一特级', star: 653, author: '魔法诗', time: '23小时', url: 'http://www.google.com.au', image:  ''},
-          {title: 'Git操作知识，再见一步', star: 115, author: 'sdzdee', time: '3天前', url: 'http://www.google.com.au', image:  ''}
-        ]
     }
   }
 
@@ -46,7 +41,11 @@ export default class HomeTab extends Component {
           return(
               <View>
                   <HotPanel title={tabTag} contents={this.state.dataBlob}/>
-                  { tabTag === '热门推荐' ? <ListView /> : <ListViewForOtherTab /> }
+                  { tabTag === '热门推荐' ?
+                      <ListViewForHomeTab contents={this.state.dataBlob}/>
+                      :
+                      <ListViewForOtherTab contents={this.state.dataBlob}/>
+                  }
               </View>
           );
       }
@@ -81,7 +80,7 @@ export default class HomeTab extends Component {
           }).done();
   }
 
-  _computeTime(time){
+  _computeTime(time) {
       return '3小时';
   }
 
