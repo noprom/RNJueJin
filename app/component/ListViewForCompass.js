@@ -75,7 +75,7 @@ export default class ListViewForCompass extends Component {
                     <View style={{height: 1 / PixelRatio.get(), backgroundColor: '#f1f1f1'}}/>
                     <View style={styles.item}>
                         <View style={{flex: 20, flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center'}}>
-                            <Image style={styles.image} source={require('../image/logo_og.png')} resizeMode="stretch"/>
+                            <Image style={styles.image} source={require('../image/user_article_no_data.png')} resizeMode="stretch"/>
                         </View>
                         <View style={{flex: 80, marginTop: px2dp(10)}}>
                             <Text style={styles.content}>{rowData.title}</Text>
@@ -95,7 +95,7 @@ export default class ListViewForCompass extends Component {
                     <View style={{height: 1 / PixelRatio.get(), backgroundColor: '#f1f1f1'}}/>
                     <View style={styles.item}>
                         <View style={{flex: 25, flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center'}}>
-                            <Image style={styles.image} source={require('../image/logo_og.png')} resizeMode="stretch"/>
+                            <Image style={styles.image} source={require('../image/user_article_no_data.png')} resizeMode="stretch"/>
                         </View>
                         <View style={{flex: 75, marginTop: px2dp(15)}}>
                             <Text style={styles.content}>{rowData.title}</Text>
@@ -160,7 +160,8 @@ const styles = StyleSheet.create({
   },
   image: {
       height: px2dp(50),
-      width: px2dp(50)
+      width: px2dp(50),
+      backgroundColor: '#f4f4f4'
   },
   infoBar: {
       flexDirection: 'row',
