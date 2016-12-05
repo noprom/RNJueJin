@@ -10,6 +10,10 @@ import TextButton from '../component/TextButton';
 
 export default class ListViewForHome extends Component {
 
+    static propTypes = {
+        refreshing: PropTypes.func
+    }
+
     constructor(props) {
         super(props);
         const ds = new ListView.DataSource({

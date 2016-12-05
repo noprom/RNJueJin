@@ -16,7 +16,15 @@ import px2dp from '../util/px2dp';
 import theme from '../config/theme';
 import MainPage from '../page/MainPage';
 
-export default class ListViewForCompass extends Component {
+export default class SimpleListView extends Component {
+
+  static propTypes = {
+    isRenderHeader: PropTypes.bool
+  }
+
+  static defaultProps = {
+    isRenderHeader: false
+  }
 
   constructor(props) {
     super(props);
@@ -78,7 +86,7 @@ export default class ListViewForCompass extends Component {
                             <Image style={styles.image} source={require('../image/user_article_no_data.png')} resizeMode="stretch"/>
                         </View>
                         <View style={{flex: 80, marginTop: px2dp(10)}}>
-                            <Text style={styles.content}>{rowData.title}</Text>
+                            <Text style={styles.content} numberOfLines={2}>{rowData.title}</Text>
                             <View style={styles.infoBar}>
                                 <Text style={styles.infoBarText}>{rowData.count}人收藏 • {rowData.author.username} • {rowData.time}</Text>
                             </View>
@@ -98,11 +106,9 @@ export default class ListViewForCompass extends Component {
                             <Image style={styles.image} source={require('../image/user_article_no_data.png')} resizeMode="stretch"/>
                         </View>
                         <View style={{flex: 75, marginTop: px2dp(15)}}>
-                            <Text style={styles.content}>{rowData.title}</Text>
+                            <Text style={styles.content} numberOfLines={2}>{rowData.title}</Text>
                             <View style={styles.infoBar}>
-                                <Text style={styles.infoBarText}>{rowData.count}人收藏 • </Text>
-                                <Text style={styles.infoBarText}>{rowData.author} • </Text>
-                                <Text style={styles.infoBarText}>{rowData.time}</Text>
+                                <Text style={styles.infoBarText} numberOfLines={1}>{rowData.count}人收藏 • {rowData.author.username} • {rowData.time}</Text>
                             </View>
                         </View>
                     </View>
@@ -113,11 +119,13 @@ export default class ListViewForCompass extends Component {
   }
 
   _renderHeader() {
-      return(
-        <View style={styles.header}>
-            <Text>热门文章</Text>
-        </View>
-      );
+      if (this.props.isRenderHeader) {
+        return(
+          <View style={styles.header}>
+              <Text>热门文章</Text>
+          </View>
+        );
+      }
   }
 
   render() {
@@ -159,8 +167,8 @@ const styles = StyleSheet.create({
       fontSize: px2dp(15),
   },
   image: {
-      height: px2dp(50),
-      width: px2dp(50),
+      height: px2dp(55),
+      width: px2dp(55),
       backgroundColor: '#f4f4f4'
   },
   infoBar: {
