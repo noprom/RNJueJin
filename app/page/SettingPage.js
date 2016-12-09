@@ -88,6 +88,14 @@ export default class SettingPage extends Component {
 }
 
 class Item extends Component {
+
+    constructor(props) {
+      super(props);
+      this.state = {
+        switchIsOn: true
+      };
+    }
+
     static propTypes = {
         text: PropTypes.string.isRequired,
         textColor: PropTypes.string,

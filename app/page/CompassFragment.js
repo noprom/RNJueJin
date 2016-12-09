@@ -45,6 +45,7 @@ export default class CompassFragment extends Component {
       {refreshing: true}
     );
     setTimeout(() => this.setState({refreshing: false}), 3000);
+    this._fetchData();
   }
 
   _renderListView() {
