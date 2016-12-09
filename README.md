@@ -10,6 +10,10 @@ This project currently uses these dependencies:
 - [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons)
 - [react-native-scrollable-tab-view](https://github.com/skv-headless/react-native-scrollable-tab-view)
 
+# Apk File
+
+The latest apk file is at [here](https://github.com/noprom/RNJuejin/blob/master/android/app/app-release.apk)
+
 # How to run it
 
 1. git clone https://github.com/noprom/RNJueJin.git
