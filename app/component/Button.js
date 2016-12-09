@@ -17,14 +17,20 @@ export default class Button extends Component {
     onPress: PropTypes.func
   };
 
+  _renderContent() {
+    return(
+      <View style={styles.button}>
+        <Text style={styles.text}>{this.props.text}</Text>
+      </View>
+    );
+  }
+
   render() {
     if (Platform.OS === 'android') {
       return (
         <TouchableNativeFeedback
           onPress={this.props.onPress}>
-          <View style={styles.button}>
-            <Text style={styles.text}>{this.props.text}</Text>
-          </View>
+          {this._renderContent()}
         </TouchableNativeFeedback>
       );
     } else if (Platform.OS === 'ios') {
@@ -32,9 +38,7 @@ export default class Button extends Component {
         <TouchableHighlight
           onPress={this.props.onPress}
           activeOpacity={theme.btnActiveOpacity}>
-          <View style={styles.button}>
-            <Text style={styles.text}>{this.props.text}</Text>
-          </View>
+          {this._renderContent()}
         </TouchableHighlight>
       );
     }

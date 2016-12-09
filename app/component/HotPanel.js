@@ -50,6 +50,36 @@ export default class HotPanel extends Component {
         this.state.data.length = 3;
     }
 
+    _renderContent(item, index) {
+        return(
+            <View>
+                <View style={styles.listItem}>
+                    <View style={{flex: 80, marginTop: px2dp(10)}}>
+                        <Text style={styles.content} numberOfLines={2}>{item.title}</Text>
+                        <View style={styles.infoBar}>
+                            <Icon name="heart" size={px2dp(13)} color={theme.grayColor}/>
+                            <Text style={styles.infoBarText}>{item.collectionCount}</Text>
+                            <Icon name="person" size={px2dp(12)} color={theme.grayColor}/>
+                            <Text style={styles.infoBarText}>{item.user.username}</Text>
+                            <Icon name="clock" size={px2dp(13)} color={theme.grayColor}/>
+                            <Text style={styles.infoBarText}>{item.time}</Text>
+                        </View>
+                    </View>
+                    <View style={{flex: 20, flexDirection: 'row', justifyContent: 'flex-end', alignItems: 'center'}}>
+                        {item.screenshot ?
+                            <Image source={{uri: item.screenshot.url}}
+                                   style={styles.image}/>
+                            :
+                            <Image source={require('../image/user_article_no_data.png')}
+                                   style={styles.image}/>
+                        }
+                    </View>
+                </View>
+                <View style={{height: 1/PixelRatio.get(), backgroundColor: '#f1f1f1'}}></View>
+            </View>
+        );
+    }
+
     render() {
         const {title} = this.props;
         var {data} = this.state;
@@ -89,31 +119,7 @@ export default class HotPanel extends Component {
                                key={index}
                                onPress={this._hotPanelCallback.bind(this, item)}
                                activeOpacity={theme.btnActiveOpacity}>
-                               <View>
-                                   <View style={styles.listItem}>
-                                       <View style={{flex: 80, marginTop: px2dp(15)}}>
-                                           <Text style={styles.content} numberOfLines={2}>{item.title}</Text>
-                                           <View style={styles.infoBar}>
-                                               <Icon name="heart" size={px2dp(13)} color={theme.grayColor}/>
-                                               <Text style={styles.infoBarText}>{item.collectionCount}</Text>
-                                               <Icon name="person" size={px2dp(12)} color={theme.grayColor}/>
-                                               <Text style={styles.infoBarText}>{item.user.username}</Text>
-                                               <Icon name="clock" size={px2dp(13)} color={theme.grayColor}/>
-                                               <Text style={styles.infoBarText}>{item.time}</Text>
-                                           </View>
-                                       </View>
-                                       <View style={{flex: 20, flexDirection: 'row', justifyContent: 'flex-end', alignItems: 'center'}}>
-                                           {item.screenshot ?
-                                               <Image source={{uri: item.screenshot.url}}
-                                                      style={styles.image}/>
-                                               :
-                                               <Image source={require('../image/user_article_no_data.png')}
-                                                      style={styles.image}/>
-                                           }
-                                       </View>
-                                   </View>
-                                   <View style={{height: 1/PixelRatio.get(), backgroundColor: '#f1f1f1'}}></View>
-                             </View>
+                               {this._renderContent(item, index)}
                            </TouchableOpacity>
                        )
                      } else if(Platform.OS === 'android') {
@@ -121,31 +127,7 @@ export default class HotPanel extends Component {
                            <TouchableNativeFeedback
                                key={index}
                                onPress={this._hotPanelCallback.bind(this, item)}>
-                               <View>
-                                   <View style={styles.listItem}>
-                                       <View style={{flex: 80, marginTop: px2dp(15)}}>
-                                           <Text style={styles.content} numberOfLines={2}>{item.title}</Text>
-                                           <View style={styles.infoBar}>
-                                               <Icon name="heart" size={px2dp(13)} color={theme.grayColor}/>
-                                               <Text style={styles.infoBarText}>{item.star}</Text>
-                                               <Icon name="person" size={px2dp(12)} color={theme.grayColor}/>
-                                               <Text style={styles.infoBarText}>{item.author}</Text>
-                                               <Icon name="clock" size={px2dp(13)} color={theme.grayColor}/>
-                                               <Text style={styles.infoBarText}>{item.time}</Text>
-                                           </View>
-                                       </View>
-                                       <View style={{flex: 20, flexDirection: 'row', justifyContent: 'flex-end', alignItems: 'center'}}>
-                                         {item.screenshot ?
-                                             <Image source={{uri: item.screenshot.url}}
-                                                    style={styles.image}/>
-                                             :
-                                             <Image source={require('../image/user_article_no_data.png')}
-                                                    style={styles.image}/>
-                                         }
-                                       </View>
-                                   </View>
-                                   <View style={{height: 1/PixelRatio.get(), backgroundColor: '#f1f1f1'}}></View>
-                               </View>
+                               {this._renderContent(item, index)}
                            </TouchableNativeFeedback>
                        )}})
                       }

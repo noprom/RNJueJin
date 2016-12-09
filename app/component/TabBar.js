@@ -29,6 +29,7 @@ export default class TabBar extends Component {
 
     return (
       <TabNavigator
+        hidesTabTouch={true}
         tabBarStyle={styles.tabbar}>
         <TabNavigator.Item
              tabStyle={styles.tabStyle}
