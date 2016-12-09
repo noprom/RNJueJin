@@ -3,8 +3,9 @@ import { StyleSheet, View, Text, ScrollView, Switch, TouchableNativeFeedback, To
 import px2dp from '../util/px2dp';
 import theme from '../config/theme';
 import NavigationBar from '../component/SimpleNavigationBar';
+import PageComponent from './BackPageComponent';
 
-export default class SettingPage extends Component {
+export default class SettingPage extends PageComponent {
 
     constructor(props) {
         super(props);
@@ -14,23 +15,6 @@ export default class SettingPage extends Component {
 
     _backCallback() {
         this.handleBack = this._handleBack.bind(this);
-    }
-
-    componentDidMount() {
-        BackAndroid.addEventListener('hardwareBackPress', this.handleBack);
-    }
-
-    componentWillUnmount() {
-        BackAndroid.removeEventListener('hardwareBackPress', this.handleBack);
-    }
-
-    _handleBack() {
-      const navigator = this.props.navigator;
-      if (navigator && navigator.getCurrentRoutes().length > 1) {
-          navigator.pop()
-          return true;
-      }
-      return false;
     }
 
     render() {
