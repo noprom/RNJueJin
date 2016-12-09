@@ -6,12 +6,13 @@ import px2dp from '../util/px2dp';
 import ScrollableTabView from 'react-native-scrollable-tab-view';
 import CustomTabBar from '../component/CustomTabBar';
 import HomeTab from './HomeTabPages/HomeTab';
+import TabItemSwitcherPage from './TabItemSwitcherPage';
 
 export default class HomeFragment extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      tabNames: ['首页', 'Android', 'iOS', '前端', '后端', '产品', '设计']
+      tabNames: ['首页', 'Android', 'iOS']
     }
   }
 
@@ -19,7 +20,7 @@ export default class HomeFragment extends Component {
     return (
       <View style={styles.container}>
         <ScrollableTabView
-           renderTabBar={() => <CustomTabBar />}
+           renderTabBar={() => <CustomTabBar pullDownOnPress={this._pullDownCallback.bind(this)}/>}
            tabBarBackgroundColor="rgb(22,131,251)"
            tabBarActiveTextColor="white"
            tabBarInactiveTextColor="rgba(255,255,255,0.5)"
@@ -33,6 +34,17 @@ export default class HomeFragment extends Component {
        </ScrollableTabView>
       </View>
     );
+  }
+
+  _pullDownCallback() {
+      this.props.navigator.push({
+          component: TabItemSwitcherPage,
+          args: {callback: this._callback, tabNames: this.state.tabNames}
+      });
+  }
+
+  _callback() {
+
   }
 }
 

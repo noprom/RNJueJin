@@ -38,7 +38,7 @@ export default class TabBar extends Component {
              renderIcon={() => <Image style={styles.tab} source={this.state.homeNormal} />}
              renderSelectedIcon={() => <Image style={styles.tab} source={this.state.homeSelected} />}
              onPress={() => this.setState({ selectedTab: 'home' })}>
-             {<HomeFragment />}
+             {<HomeFragment navigator={this.props.navigator}/>}
         </TabNavigator.Item>
         <TabNavigator.Item
              tabStyle={styles.tabStyle}
@@ -58,7 +58,7 @@ export default class TabBar extends Component {
              renderIcon={() => <Image style={styles.tab} source={this.state.notificationNormal} />}
              renderSelectedIcon={() => <Image style={styles.tab} source={this.state.notificationSelected} />}
              onPress={() => this.setState({ selectedTab: 'notification' })}>
-             {<NotifyFragment />}
+             {<NotifyFragment navigator={this.props.navigator}/>}
         </TabNavigator.Item>
         <TabNavigator.Item
              tabStyle={styles.tabStyle}
@@ -68,7 +68,7 @@ export default class TabBar extends Component {
              renderIcon={() => <Image style={styles.tab} source={this.state.meNormal} />}
              renderSelectedIcon={() => <Image style={styles.tab} source={this.state.meSelected} />}
              onPress={() => this.setState({ selectedTab: 'me' })}>
-             {<MeFragment />}
+             {<MeFragment navigator={this.props.navigator}/>}
         </TabNavigator.Item>
       </TabNavigator>
     );
