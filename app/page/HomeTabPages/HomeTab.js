@@ -5,6 +5,7 @@ import { Text, StyleSheet, View, ScrollView, RefreshControl } from 'react-native
 import HotPanel from '../../component/HotPanel';
 import ListViewForHomeTab from '../../component/ListViewForHome';
 import ListViewForOtherTab from '../../component/SimpleListView';
+import computeTime from '../../util/computeTime';
 
 export default class HomeTab extends Component {
 
@@ -12,6 +13,7 @@ export default class HomeTab extends Component {
     super(props);
     this.state = {
       refreshing: true,
+      loadedData: false,
       dataBlob: [],
     }
   }
@@ -36,7 +38,7 @@ export default class HomeTab extends Component {
       else
           tabTag = '热门';
 
-      if(!this.state.refreshing) {
+      if(!this.state.refreshing || this.state.loadedData) {
           return(
               <View>
                   <HotPanel title={tabTag} contents={this.state.dataBlob}/>
@@ -50,14 +52,26 @@ export default class HomeTab extends Component {
       }
   }
 
+  _getCurrentTime() {
+      function convertTime(time) {
+          if (time <= 9)
+              return '0' + time;
+          return time;
+      }
+
+      var date = new Date();
+      return date.getFullYear() + '-' + convertTime(date.getMonth() + 1) + '-' + convertTime(date.getDate()) + 'T' + convertTime(date.getHours()) + ':' + convertTime(date.getMinutes()) + ':' + convertTime(date.getSeconds() + '.' + date.getMilliseconds() + 'Z');
+  }
+
   _fetchData() {
-      fetch('http://gold.xitu.io/api/v1/timeline/57fa525a0e3dd90057c1e04d/2016-11-13T05:04:10.044Z')
+      var url = 'http://gold.xitu.io/api/v1/timeline/57fa525a0e3dd90057c1e04d/' + this._getCurrentTime();
+      fetch(url)
           .then((response) => response.json())
           .then((responseData) => {
               let data = responseData.data;
               var dataBlob = [];
 
-              for(let i in data) {
+              for (let i in data) {
                   let info = {
                       tags: data[i].tagsTitleArray,
                       category: data[i].category,
@@ -66,7 +80,7 @@ export default class HomeTab extends Component {
                       title: data[i].title,
                       user: data[i].user,
                       url: data[i].url,
-                      time: this._computeTime(data[i].createdAtString),
+                      time: computeTime(data[i].createdAtString),
                       screenshot: null
                   }
                   dataBlob.push(info);
@@ -74,15 +88,12 @@ export default class HomeTab extends Component {
 
               this.setState({
                   dataBlob: dataBlob,
+                  loadedData: true,
                   refreshing: false
               });
           }).done();
   }
-
-  _computeTime(time) {
-      return '3小时';
-  }
-
+  
   render() {
     return (
       <ScrollView
