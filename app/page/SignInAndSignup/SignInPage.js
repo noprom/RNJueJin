@@ -1,6 +1,6 @@
 'use strict';
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, PixelRatio, Platform, TouchableOpacity, Image, TextInput } from 'react-native';
+import { Text, View, StyleSheet, PixelRatio, Platform, TouchableOpacity, Image, TextInput, BackAndroid } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import Button from '../../component/Button';
 import TextButton from '../../component/TextButton';
@@ -12,8 +12,26 @@ import px2dp from '../../util/px2dp';
 
 export default class SignInPage extends Component {
 
-  _backCallback() {
-    this.props.navigator.pop();
+  constructor(props) {
+      super(props);
+      this.handleBack = this._handleBack.bind(this);
+  }
+
+  componentDidMount() {
+      BackAndroid.addEventListener('hardwareBackPress', this.handleBack);
+  }
+
+  componentWillUnmount() {
+      BackAndroid.removeEventListener('hardwareBackPress', this.handleBack);
+  }
+
+  _handleBack() {
+      const navigator = this.props.navigator;
+      if (navigator && navigator.getCurrentRoutes().length > 1) {
+          navigator.pop();
+          return true;
+      }
+      return false;
   }
 
   _signInCallback() {
@@ -34,7 +52,7 @@ export default class SignInPage extends Component {
     return (
       <View style={styles.view}>
         <View style={styles.actionBar}>
-          <ImageButton onPress={this._backCallback.bind(this)} icon="md-arrow-back" color="white" imgSize={px2dp(18)} btnStyle={{width: 50, height: 60}}/>
+          <ImageButton onPress={this._handleBack.bind(this)} icon="md-arrow-back" color="white" imgSize={px2dp(18)} btnStyle={{width: 50, height: 60}}/>
         </View>
         <View style={styles.logo}>
           <Image style={{width:45, height:45}} source={require('../../image/ic_login_logo.png')} />
@@ -57,7 +75,7 @@ export default class SignInPage extends Component {
               placeholderTextColor="#c4c4c4"/>
           </View>
           <View style={{marginTop: px2dp(10)}}>
-            <Button text="登录" onPress={this._signInCallback.bind(this)}/>
+            <Button text="登录" onPress={this._handleBack.bind(this)}/>
           </View>
           <View style={styles.textButtonLine}>
             <TextButton text="忘记密码?" onPress={this._forgetPassword.bind(this)} color="rgba(255,255,255,0.5)"/>

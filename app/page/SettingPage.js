@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { StyleSheet, View, Text, ScrollView, Switch, TouchableNativeFeedback, TouchableOpacity, Platform, PixelRatio } from 'react-native';
+import { StyleSheet, View, Text, ScrollView, Switch, TouchableNativeFeedback, TouchableOpacity, Platform, PixelRatio, BackAndroid } from 'react-native';
 import px2dp from '../util/px2dp';
 import theme from '../config/theme';
 import NavigationBar from '../component/SimpleNavigationBar';
@@ -9,18 +9,34 @@ export default class SettingPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          switchIsOn: true
         }
     }
 
     _backCallback() {
-        this.props.navigator.pop();
+        this.handleBack = this._handleBack.bind(this);
+    }
+
+    componentDidMount() {
+        BackAndroid.addEventListener('hardwareBackPress', this.handleBack);
+    }
+
+    componentWillUnmount() {
+        BackAndroid.removeEventListener('hardwareBackPress', this.handleBack);
+    }
+
+    _handleBack() {
+      const navigator = this.props.navigator;
+      if (navigator && navigator.getCurrentRoutes().length > 1) {
+          navigator.pop()
+          return true;
+      }
+      return false;
     }
 
     render() {
         return(
             <View style={{flex: 1}}>
-                <NavigationBar title="设置" backOnPress={this._backCallback.bind(this)}/>
+                <NavigationBar title="设置" backOnPress={this._handleBack.bind(this)}/>
                 <ScrollView>
                     <View style={styles.list}>
                         <Item text="邮箱" subText="未设置"/>

@@ -9,13 +9,15 @@ export default class WebViewPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
+
     };
+    this.handleBack = this._handleBack.bind(this);
   }
 
   render() {
       return(
           <View style={styles.container}>
-            <NavigationBar userInfo={this.props.user} onPress={this._backCallback.bind(this)}/>
+            <NavigationBar userInfo={this.props.user} onPress={this._handleBack.bind(this)}/>
             <WebView
                 source={{uri: this.props.url}}
                 style={styles.webView}
@@ -37,8 +39,21 @@ export default class WebViewPage extends Component {
       );
   }
 
-  _backCallback() {
-      this.props.navigator.pop();
+  componentDidMount() {
+      BackAndroid.addEventListener('hardwareBackPress', this.handleBack);
+  }
+
+  componentWillUnmount() {
+      BackAndroid.removeEventListener('hardwareBackPress', this.handleBack);
+  }
+
+  _handleBack() {
+      const navigator = this.props.navigator;
+      if (navigator && navigator.getCurrentRoutes().length > 1) {
+          navigator.pop();
+          return true;
+      }
+      return false;
   }
 }
 

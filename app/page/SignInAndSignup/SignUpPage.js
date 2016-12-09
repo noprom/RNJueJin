@@ -7,7 +7,7 @@ import {
   Platform,
   TouchableOpacity,
   Image,
-  TextInput
+  TextInput, BackAndroid
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import Button from '../../component/Button';
@@ -15,11 +15,30 @@ import px2dp from '../../util/px2dp';
 import ImageButton from '../../component/ImageButtonWithText';
 
 export default class SignUpPage extends Component {
-  _backCallback() {
-    this.props.navigator.pop();
+
+  constructor(props) {
+      super(props);
+      this.handleBack = this._handleBack.bind(this);
   }
 
-  _signinCallback() {
+  componentDidMount() {
+      BackAndroid.addEventListener('hardwareBackPress', this.handleBack);
+  }
+
+  componentWillUnmount() {
+      BackAndroid.removeEventListener('hardwareBackPress', this.handleBack);
+  }
+
+  _handleBack() {
+      const navigator = this.props.navigator;
+      if (navigator && navigator.getCurrentRoutes().length > 1) {
+          navigator.pop();
+          return true;
+      }
+      return false;
+  }
+
+  _signupCallback() {
 
   }
 
@@ -28,7 +47,7 @@ export default class SignUpPage extends Component {
       <View style={styles.view}>
         <View style={styles.actionBar}>
           <ImageButton
-            onPress={this._backCallback.bind(this)}
+            onPress={this._handleBack.bind(this)}
             icon="md-arrow-back"
             color="white"
             imgSize={px2dp(18)}
@@ -61,7 +80,7 @@ export default class SignUpPage extends Component {
               placeholderTextColor="#c4c4c4"/>
           </View>
           <View style={{marginTop: px2dp(15)}}>
-            <Button text="注册" onPress={this._signinCallback.bind(this)}/>
+            <Button text="注册" onPress={this._signupCallback.bind(this)}/>
           </View>
         </View>
       </View>
