@@ -35,7 +35,7 @@ export default class SimpleListView extends Component {
       dataSource: ds.cloneWithRows(this.props.contents)
     }
   }
-  
+
   _computeTime(time) {
     return '1天前';
   }
@@ -51,42 +51,48 @@ export default class SimpleListView extends Component {
             <TouchableOpacity
                 onPress={this._itemClickCallback.bind(this, rowData.url, rowData.user)}
                 activeOpacity={theme.btnActiveOpacity}>
-                <View>
-                    <View style={{height: 1 / PixelRatio.get(), backgroundColor: '#f1f1f1'}}/>
-                    <View style={styles.item}>
-                        <View style={{flex: 20, flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center'}}>
-                            <Image style={styles.image} source={require('../image/user_article_no_data.png')} resizeMode="stretch"/>
-                        </View>
-                        <View style={{flex: 80, marginTop: px2dp(10)}}>
-                            <Text style={styles.content} numberOfLines={2}>{rowData.title}</Text>
-                            <View style={styles.infoBar}>
-                                <Text style={styles.infoBarText} numberOfLines={1}>{rowData.collectionCount}人收藏 • {rowData.user.username} • {rowData.time}</Text>
-                            </View>
+                <View style={styles.item}>
+                    <View style={{
+                        flex: 20,
+                        flexDirection: 'row',
+                        justifyContent: 'flex-start',
+                        alignItems: 'center'
+                    }}>
+                        <Image style={styles.image} source={require('../image/user_article_no_data.png')}
+                               resizeMode="stretch"/>
+                    </View>
+                    <View style={{flex: 80, marginTop: px2dp(10)}}>
+                        <Text style={styles.content} numberOfLines={2}>{rowData.title}</Text>
+                        <View style={styles.infoBar}>
+                            <Text style={styles.infoBarText} numberOfLines={1}>{rowData.collectionCount}人收藏
+                                • {rowData.user.username} • {rowData.time}</Text>
                         </View>
                     </View>
                 </View>
             </TouchableOpacity>
         )
     } else if(Platform.OS === 'android') {
-        return (
-            <TouchableNativeFeedback
-                onPress={this._itemClickCallback.bind(this)}>
-                <View>
-                    <View style={{height: 1 / PixelRatio.get(), backgroundColor: '#f1f1f1'}}/>
-                    <View style={styles.item}>
-                        <View style={{flex: 25, flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center'}}>
-                            <Image style={styles.image} source={require('../image/user_article_no_data.png')} resizeMode="stretch"/>
-                        </View>
-                        <View style={{flex: 75, marginTop: px2dp(15)}}>
-                            <Text style={styles.content} numberOfLines={2}>{rowData.title}</Text>
-                            <View style={styles.infoBar}>
-                                <Text style={styles.infoBarText} numberOfLines={1}>{rowData.count}人收藏 • {rowData.author.username} • {rowData.time}</Text>
-                            </View>
-                        </View>
-                    </View>
-                </View>
-            </TouchableNativeFeedback>
-        )
+      return (
+          <TouchableNativeFeedback onPress={this._itemClickCallback.bind(this, rowData.url, rowData.user)}>
+              <View style={styles.item}>
+                  <View style={{
+                      flex: 20,
+                      flexDirection: 'row',
+                      justifyContent: 'flex-start',
+                      alignItems: 'center'
+                  }}>
+                      <Image style={styles.image} source={require('../image/user_article_no_data.png')} resizeMode="stretch"/>
+                  </View>
+                  <View style={{flex: 80, marginTop: px2dp(10)}}>
+                      <Text style={styles.content} numberOfLines={2}>{rowData.title}</Text>
+                      <View style={styles.infoBar}>
+                          <Text style={styles.infoBarText} numberOfLines={1}>{rowData.collectionCount}人收藏
+                              • {rowData.user.username} • {rowData.time}</Text>
+                      </View>
+                  </View>
+              </View>
+          </TouchableNativeFeedback>
+      )
     }
   }
 
@@ -128,7 +134,9 @@ const styles = StyleSheet.create({
     height: px2dp(80),
     backgroundColor: '#fff',
     paddingLeft: px2dp(15),
-    paddingRight: px2dp(17)
+    paddingRight: px2dp(17),
+    borderTopColor: '#d4d4d4',
+    borderTopWidth: 1 / PixelRatio.get()
   },
   content: {
       color: '#000',

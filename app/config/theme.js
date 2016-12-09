@@ -14,7 +14,7 @@ module.exports = {
   actionBar: {
       height: (Platform.OS === 'android') ? px2dp(49) : px2dp(69),
       backgroundColor: 'rgb(22,131,251)',
-      fontSize: px2dp(15),
+      fontSize: px2dp(16),
       fontColor: 'white'
   },
   text: {

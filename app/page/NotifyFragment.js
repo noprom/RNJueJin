@@ -20,7 +20,7 @@ export default class NotifyFragment extends Component {
              tabBarUnderlineStyle={theme.scrollView.underlineStyle}>
              <View tabLabel="消息" style={styles.content}>
                 <Text style={{marginBottom: 10}}>currently there are no any messages</Text>
-                <Button onPress={() => {MainPage.switchToSingInPage();}} title="登录 / Sign-in" color={theme.themeColor} />
+                <Button onPress={() => {MainPage.switchToSignInPage();}} title="登录 / Sign-in" color={theme.themeColor} />
              </View>
              <View tabLabel="动态" style={styles.content}><Text>state function is not available</Text></View>
          </ScrollableTabView>

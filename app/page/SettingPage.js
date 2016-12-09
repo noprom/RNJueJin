@@ -98,7 +98,7 @@ class Item extends Component {
                                 <Switch
                                     onValueChange={(value) => this.setState({switchIsOn: value})}
                                     style={{marginLeft: px2dp(5)}}
-                                    value={true}/>
+                                    value={this.state.switchIsOn}/>
                                 :
                                 null
                             }
@@ -113,6 +113,14 @@ class Item extends Component {
                         <Text style={{color: textColor, fontSize: px2dp(15)}}>{text}</Text>
                         <View style={{flex: 1, flexDirection: 'row', justifyContent: 'flex-end', alignItems: 'center'}}>
                             <Text style={{color: "#ccc"}}>{subText}</Text>
+                            { isHasSwitcher ?
+                                <Switch
+                                    onValueChange={(value) => this.setState({switchIsOn: value})}
+                                    style={{marginLeft: px2dp(5)}}
+                                    value={this.state.switchIsOn}/>
+                                :
+                                null
+                            }
                         </View>
                     </View>
                 </TouchableOpacity>
@@ -134,6 +142,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         paddingLeft: px2dp(25),
-        paddingRight: px2dp(25)
+        paddingRight: px2dp(25),
+        borderBottomColor: '#c4c4c4',
+        borderBottomWidth: 1 / PixelRatio.get()
     },
 });

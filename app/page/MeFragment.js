@@ -134,7 +134,7 @@ class Item extends Component {
     render() {
         const {icon, iconColor, text, subText, onPress} = this.props;
 
-        if(Platform.OS === 'android'){
+        if(Platform.OS === 'android') {
             return(
                 <TouchableNativeFeedback onPress={onPress}>
                     <View style={styles.listItem}>
@@ -146,7 +146,7 @@ class Item extends Component {
                     </View>
                 </TouchableNativeFeedback>
             );
-        } else if(Platform.OS === 'ios'){
+        } else if(Platform.OS === 'ios') {
             return(
                 <TouchableOpacity onPress={onPress} activeOpacity={theme.btnActiveOpacity}>
                     <View style={styles.listItem}>
@@ -197,6 +197,8 @@ const styles = StyleSheet.create({
        flexDirection: 'row',
        alignItems: 'center',
        paddingLeft: px2dp(25),
-       paddingRight: px2dp(25)
+       paddingRight: px2dp(25),
+       borderBottomColor: '#c4c4c4',
+       borderBottomWidth: 1 / PixelRatio.get()
    }
 });

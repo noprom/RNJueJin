@@ -1,7 +1,7 @@
 'use strict';
 
 import React, { Component, PropTypes } from 'react';
-import ReactNative, { Text, View, StyleSheet, Platform, TouchableOpacity, ListView, Image, PixelRatio } from 'react-native';
+import ReactNative, { Text, View, StyleSheet, Platform, TouchableOpacity, TouchableNativeFeedback, ListView, Image, PixelRatio } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import px2dp from '../util/px2dp';
 import theme from '../config/theme';
@@ -31,7 +31,7 @@ export default class ListViewForHome extends Component {
     _userNameClickCallback(userInfo) {
       MainPage.switchToIndividualPage(userInfo);
     }
-    
+
     _computeTime(time) {
         return '3小时';
     }
@@ -61,18 +61,43 @@ export default class ListViewForHome extends Component {
                 { rowData.screenshot === null ?
                     <View>
                         <Text style={styles.content} numberOfLines={3}>{rowData.content}</Text>
-                        <TouchableOpacity
-                            onPress={this._itemClickCallback.bind(this, rowData.url, rowData.user)}
-                            activeOpacity={theme.btnActiveOpacity}>
-                            <View style = {styles.linkView}>
-                                <View style={{flex: 20}}>
-                                    <Image source={require('../image/user_article_no_data.png')} style={styles.linkImage}/>
+                        { Platform.OS === 'ios' ?
+                            <TouchableOpacity
+                                onPress={this._itemClickCallback.bind(this, rowData.url, rowData.user)}
+                                activeOpacity={theme.btnActiveOpacity}>
+                                <View style={styles.linkView}>
+                                    <View style={{flex: 20}}>
+                                        <Image source={require('../image/user_article_no_data.png')}
+                                               style={styles.linkImage}/>
+                                    </View>
+                                    <View style={{
+                                        flex: 80,
+                                        justifyContent: 'center',
+                                        alignItems: 'flex-start',
+                                        padding: px2dp(5)
+                                    }}>
+                                        <Text style={styles.linkText} numberOfLines={2}>{rowData.title}</Text>
+                                    </View>
                                 </View>
-                                <View style={{flex: 80, justifyContent:'center', alignItems:'flex-start', padding: px2dp(5)}}>
-                                    <Text style={styles.linkText} numberOfLines={2}>{rowData.title}</Text>
-                                </View>
-                            </View>
-                        </TouchableOpacity>
+                            </TouchableOpacity>
+                            :
+                            <TouchableNativeFeedback onPress={this._itemClickCallback.bind(this, rowData.url, rowData.user)}>
+                                <View style={styles.linkView}>
+                                    <View style={{flex: 20}}>
+                                        <Image source={require('../image/user_article_no_data.png')}
+                                               style={styles.linkImage}/>
+                                    </View>
+                                    <View style={{
+                                        flex: 80,
+                                        justifyContent: 'center',
+                                        alignItems: 'flex-start',
+                                        padding: px2dp(5)
+                                    }}>
+                                        <Text style={styles.linkText} numberOfLines={2}>{rowData.title}</Text>
+                                    </View>
+                              </View>
+                            </TouchableNativeFeedback>
+                        }
                     </View>
                     :
                     <View>
