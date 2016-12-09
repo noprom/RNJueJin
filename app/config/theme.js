@@ -9,7 +9,7 @@ module.exports = {
   screenHeight: Dimensions.get('window').height,
   themeColor: 'rgb(22,131,251)',
   grayColor: '#c4c4c4',
-  btnActiveOpacity: 0.6,
+  btnActiveOpacity: 0.7,
   pageBackgroundColor: '#f4f4f4',
   actionBar: {
       height: (Platform.OS === 'android') ? px2dp(49) : px2dp(69),

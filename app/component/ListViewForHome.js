@@ -58,52 +58,56 @@ export default class ListViewForHome extends Component {
                         </View>
                     </View>
                 </View>
-                { rowData.screenshot === null ?
-                    <View>
-                        <Text style={styles.content} numberOfLines={3}>{rowData.content}</Text>
-                        { Platform.OS === 'ios' ?
-                            <TouchableOpacity
-                                onPress={this._itemClickCallback.bind(this, rowData)}
-                                activeOpacity={theme.btnActiveOpacity}>
-                                <View style={styles.linkView}>
-                                    <View style={{flex: 20}}>
+                <View>
+                    <Text style={styles.content} numberOfLines={3}>{rowData.content}</Text>
+                    { Platform.OS === 'ios' ?
+                        <TouchableOpacity
+                            onPress={this._itemClickCallback.bind(this, rowData)}
+                            activeOpacity={theme.btnActiveOpacity}>
+                            <View style={styles.linkView}>
+                                <View style={{flex: 20}}>
+                                    {rowData.screenshot ?
+                                        <Image source={{uri: rowData.screenshot.url}}
+                                               style={styles.linkImage}/>
+                                        :
                                         <Image source={require('../image/user_article_no_data.png')}
                                                style={styles.linkImage}/>
-                                    </View>
-                                    <View style={{
-                                        flex: 80,
-                                        justifyContent: 'center',
-                                        alignItems: 'flex-start',
-                                        padding: px2dp(5)
-                                    }}>
-                                        <Text style={styles.linkText} numberOfLines={2}>{rowData.title}</Text>
-                                    </View>
+                                    }
                                 </View>
-                            </TouchableOpacity>
-                            :
-                            <TouchableNativeFeedback onPress={this._itemClickCallback.bind(this, rowData)}>
-                                <View style={styles.linkView}>
-                                    <View style={{flex: 20}}>
+                                <View style={{
+                                    flex: 80,
+                                    justifyContent: 'center',
+                                    alignItems: 'flex-start',
+                                    padding: px2dp(5)
+                                }}>
+                                    <Text style={styles.linkText} numberOfLines={2}>{rowData.title}</Text>
+                                </View>
+                            </View>
+                        </TouchableOpacity>
+                        :
+                        <TouchableNativeFeedback onPress={this._itemClickCallback.bind(this, rowData)}>
+                            <View style={styles.linkView}>
+                                <View style={{flex: 20}}>
+                                    {rowData.screenshot ?
+                                        <Image source={{uri: rowData.screenshot.url}}
+                                               style={styles.linkImage}/>
+                                        :
                                         <Image source={require('../image/user_article_no_data.png')}
                                                style={styles.linkImage}/>
-                                    </View>
-                                    <View style={{
-                                        flex: 80,
-                                        justifyContent: 'center',
-                                        alignItems: 'flex-start',
-                                        padding: px2dp(5)
-                                    }}>
-                                        <Text style={styles.linkText} numberOfLines={2}>{rowData.title}</Text>
-                                    </View>
-                              </View>
-                            </TouchableNativeFeedback>
-                        }
-                    </View>
-                    :
-                    <View>
-                        <Image style={styles.banner} source={{uri: rowData.screenshot}}/>
-                    </View>
-                }
+                                    }
+                                </View>
+                                <View style={{
+                                    flex: 80,
+                                    justifyContent: 'center',
+                                    alignItems: 'flex-start',
+                                    padding: px2dp(5)
+                                }}>
+                                    <Text style={styles.linkText} numberOfLines={2}>{rowData.title}</Text>
+                                </View>
+                          </View>
+                        </TouchableNativeFeedback>
+                    }
+                </View>
                 <View style={styles.bottom}>
                     <Icon name="favorite-border" color='#58c900' size={px2dp(25)}/>
                     <Text style={styles.commentText}>{rowData.collectionCount}</Text>

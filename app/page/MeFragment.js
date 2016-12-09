@@ -7,6 +7,7 @@ import Avatar from '../component/Avatar';
 import TextButton from '../component/TextButton';
 import Icon from 'react-native-vector-icons/Ionicons';
 import SettingPage from './SettingPage';
+import IndividualPage from './IndividualPage';
 
 export default class MeFragment extends Component {
 
@@ -20,7 +21,9 @@ export default class MeFragment extends Component {
   _onPressCallback(position) {
     switch(position){
        case 0:  //title
-
+           this.props.navigator.push({
+             component: IndividualPage
+           });
            break;
 
        case 1:  // add occupation
@@ -72,7 +75,7 @@ export default class MeFragment extends Component {
             </View>
           </TouchableNativeFeedback>
           :
-          <TouchableOpacity onPress={this._onPressCallback.bind(this, 0)}>
+          <TouchableOpacity onPress={this._onPressCallback.bind(this, 0)} activeOpacity={theme.btnActiveOpacity}>
             <View style={[styles.intro]}>
               <Avatar image={require('../image/logo_og.png')} size={px2dp(55)} textSize={px2dp(20)}/>
               <View style={{marginLeft: px2dp(12)}}>
