@@ -10,15 +10,21 @@ export default class SearchBar extends Component {
        onPress: PropTypes.func
    };
 
+   renderContent() {
+       return(
+           <View style={styles.searchBar}>
+               <Icon name="ios-search" size={px2dp(25)} color="white"/>
+               <Text style={styles.text}>搜索</Text>
+           </View>
+       );
+   }
+
    render() {
        if(Platform.OS === 'android') {
            return(
                <View style={styles.container}>
                    <TouchableNativeFeedback onPress={this.props.onPress}>
-                       <View style={styles.searchBar}>
-                           <Icon name="ios-search" size={px2dp(25)} color="white"/>
-                           <Text style={styles.text}>搜索</Text>
-                       </View>
+                       {this.renderContent()}
                    </TouchableNativeFeedback>
                </View>
            );
@@ -28,10 +34,7 @@ export default class SearchBar extends Component {
                    <TouchableOpacity
                       onPress={this.props.onPress}
                       activeOpacity={theme.btnActiveOpacity}>
-                       <View style={styles.searchBar}>
-                           <Icon name="ios-search" size={px2dp(25)} color="white"/>
-                           <Text style={styles.text}>搜索</Text>
-                       </View>
+                       {this.renderContent()}
                    </TouchableOpacity>
                </View>
            );

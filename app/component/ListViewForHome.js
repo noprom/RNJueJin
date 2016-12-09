@@ -36,6 +36,30 @@ export default class ListViewForHome extends Component {
         return '3小时';
     }
 
+    _renderItemContent(rowData) {
+        return(
+            <View style={styles.linkView}>
+                <View style={{flex: 20}}>
+                    {rowData.screenshot ?
+                        <Image source={{uri: rowData.screenshot.url}}
+                               style={styles.linkImage}/>
+                        :
+                        <Image source={require('../image/user_article_no_data.png')}
+                               style={styles.linkImage}/>
+                    }
+                </View>
+                <View style={{
+                    flex: 80,
+                    justifyContent: 'center',
+                    alignItems: 'flex-start',
+                    padding: px2dp(5)
+                }}>
+                    <Text style={styles.linkText} numberOfLines={2}>{rowData.title}</Text>
+                </View>
+            </View>
+        );
+    }
+    
     _renderItem(rowData, sectionID, rowID, highlightRow) {
         return(
             <View style={styles.items}>
@@ -64,47 +88,11 @@ export default class ListViewForHome extends Component {
                         <TouchableOpacity
                             onPress={this._itemClickCallback.bind(this, rowData)}
                             activeOpacity={theme.btnActiveOpacity}>
-                            <View style={styles.linkView}>
-                                <View style={{flex: 20}}>
-                                    {rowData.screenshot ?
-                                        <Image source={{uri: rowData.screenshot.url}}
-                                               style={styles.linkImage}/>
-                                        :
-                                        <Image source={require('../image/user_article_no_data.png')}
-                                               style={styles.linkImage}/>
-                                    }
-                                </View>
-                                <View style={{
-                                    flex: 80,
-                                    justifyContent: 'center',
-                                    alignItems: 'flex-start',
-                                    padding: px2dp(5)
-                                }}>
-                                    <Text style={styles.linkText} numberOfLines={2}>{rowData.title}</Text>
-                                </View>
-                            </View>
+                            {this._renderItemContent(rowData)}
                         </TouchableOpacity>
                         :
                         <TouchableNativeFeedback onPress={this._itemClickCallback.bind(this, rowData)}>
-                            <View style={styles.linkView}>
-                                <View style={{flex: 20}}>
-                                    {rowData.screenshot ?
-                                        <Image source={{uri: rowData.screenshot.url}}
-                                               style={styles.linkImage}/>
-                                        :
-                                        <Image source={require('../image/user_article_no_data.png')}
-                                               style={styles.linkImage}/>
-                                    }
-                                </View>
-                                <View style={{
-                                    flex: 80,
-                                    justifyContent: 'center',
-                                    alignItems: 'flex-start',
-                                    padding: px2dp(5)
-                                }}>
-                                    <Text style={styles.linkText} numberOfLines={2}>{rowData.title}</Text>
-                                </View>
-                          </View>
+                            {this._renderItemContent(rowData)}
                         </TouchableNativeFeedback>
                     }
                 </View>
