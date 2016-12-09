@@ -13,15 +13,11 @@ import px2dp from '../../util/px2dp';
 export default class SignInPage extends Component {
 
   _backCallback() {
-    this.props.navigator.push({
-      component: MainPage
-    });
+    this.props.navigator.pop();
   }
 
   _signInCallback() {
-    this.props.navigator.push({
-      component: MainPage
-    });
+    this.props.navigator.pop();
   }
 
   _signUpCallback() {

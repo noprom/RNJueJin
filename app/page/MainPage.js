@@ -5,6 +5,7 @@ import TabBar from '../component/TabBar';
 import WebViewPage from './WebViewPage';
 import IndividualPage from './IndividualPage';
 import SettingPage from './SettingPage';
+import SignInPage from './SignInAndSignup/SignInPage';
 
 export default class MainScene extends Component {
 
@@ -13,6 +14,7 @@ export default class MainScene extends Component {
       MainScene.switchToWebViewPage = MainScene.switchToWebViewPage.bind(this);
       MainScene.switchToIndividualPage = MainScene.switchToIndividualPage.bind(this);
       MainScene.switchToSettingPage = MainScene.switchToSettingPage.bind(this);
+      MainScene.switchToSignInPage = MainScene.switchToSignInPage.bind(this);
   }
 
   static switchToWebViewPage(url, userInfo) {
@@ -32,6 +34,12 @@ export default class MainScene extends Component {
   static switchToSettingPage() {
       this.props.navigator.push({
         component: SettingPage
+      });
+  }
+
+  static switchToSignInPage() {
+      this.props.navigator.push({
+        component: SignInPage
       });
   }
 
