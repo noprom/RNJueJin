@@ -30,8 +30,8 @@ export default class HotPanel extends Component {
 
     }
 
-    _hotPanelCallback(url, userInfo) {
-        MainPage.switchToWebViewPage(url, userInfo);
+    _hotPanelCallback(rowData) {
+        MainPage.switchToWebViewPage(rowData);
     }
 
     componentWillMount() {  //handle three top data
@@ -87,7 +87,7 @@ export default class HotPanel extends Component {
                        return(
                            <TouchableOpacity
                                key={index}
-                               onPress={this._hotPanelCallback.bind(this, item.url, item.user)}
+                               onPress={this._hotPanelCallback.bind(this, item)}
                                activeOpacity={theme.btnActiveOpacity}>
                                <View>
                                    <View style={styles.listItem}>
@@ -114,7 +114,7 @@ export default class HotPanel extends Component {
                        return(
                            <TouchableNativeFeedback
                                key={index}
-                               onPress={this._hotPanelCallback.bind(this, item.url)}>
+                               onPress={this._hotPanelCallback.bind(this, item)}>
                                <View>
                                    <View style={styles.listItem}>
                                        <View style={{flex: 80, marginTop: px2dp(15)}}>

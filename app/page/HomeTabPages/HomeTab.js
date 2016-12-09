@@ -81,6 +81,8 @@ export default class HomeTab extends Component {
                       user: data[i].user,
                       url: data[i].url,
                       time: computeTime(data[i].createdAtString),
+                      commentsCount: data[i].commentsCount,
+                      viewsCount: data[i].viewsCount,
                       screenshot: null
                   }
                   dataBlob.push(info);
@@ -93,7 +95,7 @@ export default class HomeTab extends Component {
               });
           }).done();
   }
-  
+
   render() {
     return (
       <ScrollView
